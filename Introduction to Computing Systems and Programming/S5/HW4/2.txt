@@ -1,0 +1,19 @@
+take array size
+take array (less than 11 elements)
+take one number
+
+add 1 to array size
+define taked number as the last member of array
+
+for ( i = 0 ; i < array size ; i++) {
+    for (int j = i+1 ; j < array size ; j++) {
+        if (member i of array > member j of array) {
+            keep member i of array in a holder
+            member i of array = member j of array
+            member j of array =  holder 
+        }
+    }
+}
+
+print (array)
+

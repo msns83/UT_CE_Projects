@@ -1,0 +1,2 @@
+void whichPlayer(int player,int *playersChoices,int *player1Table,int *player2,int *player3,int *player4,int circular,int *score, int *nextPlayer , int *setScore);
+/*executes the steps based on which player (from 0 to 3) should start*/
