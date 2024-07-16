@@ -1,0 +1,363 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/modeltech64_2020.4/examples
+T_opt
+!s110 1717192012
+V8@llG3`dh7Gi<B9Tz<XLL3
+04 11 4 work receiver_TB fast 0
+=1-f2ee57b242bd-665a454b-3d7-1798
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1717170308
+VY>ZE3hoBaHU6[9<Qg:UQ50
+04 15 4 work serial_receiver fast 0
+=1-f2ee57b242bd-6659f083-32c-8d0
+R1
+R2
+n@_opt1
+R3
+R0
+vcontroller
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1717195824
+!i10b 1
+!s100 ;QX:4BRDU>he1aVzN?i<T3
+Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IMX<R?H1nDR>W989B1@>671
+S1
+Z7 dC:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code
+w1717186092
+8C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controller.sv
+FC:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controller.sv
+!i122 376
+L0 1 33
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z10 !s108 1717195824.000000
+!s107 C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controller.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controller.sv|
+!i113 0
+Z11 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vcontrollerS
+R4
+Z12 !s110 1717195825
+!i10b 1
+!s100 znIWHWLEV6nC[6L9O0_0n3
+R6
+I0XFZ4<_D?^fc6a3_T]j]c0
+S1
+R7
+w1717191219
+8C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controllerS.sv
+FC:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controllerS.sv
+!i122 381
+L0 1 20
+R8
+R9
+r1
+!s85 0
+31
+Z13 !s108 1717195825.000000
+!s107 C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controllerS.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controllerS.sv|
+!i113 0
+R11
+R2
+ncontroller@s
+vequalChecker
+R4
+R12
+!i10b 1
+!s100 Vb>JR7gZd=eAQTE76iZWn1
+R6
+IDUjW>2fQC0C1Sm6OaY@D61
+S1
+R7
+Z14 w1717190458
+Z15 8C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/essentials.sv
+Z16 FC:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/essentials.sv
+!i122 379
+L0 1 16
+R8
+R9
+r1
+!s85 0
+31
+R10
+Z17 !s107 C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/essentials.sv|
+Z18 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/essentials.sv|
+!i113 0
+R11
+R2
+nequal@checker
+vfilipflop
+R4
+!s110 1717188554
+!i10b 1
+!s100 G9Ll_`Zg:YJzJkETLfQnf0
+R6
+IVK9@b1^LROCThICMgUDbb2
+S1
+R7
+w1717188550
+R15
+R16
+!i122 297
+L0 1 10
+R8
+R9
+r1
+!s85 0
+31
+!s108 1717188554.000000
+R17
+R18
+!i113 0
+R11
+R2
+vfilpflop
+R4
+R12
+!i10b 1
+!s100 Tnh[XV?UciP0Dd^FKMaDE0
+R6
+I7W_FTDzDlIaj[D7R_[J1z2
+S1
+R7
+R14
+R15
+R16
+!i122 379
+L0 19 10
+R8
+R9
+r1
+!s85 0
+31
+R10
+R17
+R18
+!i113 0
+R11
+R2
+vLR_shifter
+R4
+R5
+!i10b 1
+!s100 Tda`hQaUEfD`GNjh>Ga4=1
+R6
+IYkQU59AON=T8E_bm]?3E72
+S1
+R7
+w1717169160
+8C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/LR_shifter.sv
+FC:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/LR_shifter.sv
+!i122 374
+L0 1 25
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/LR_shifter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/LR_shifter.sv|
+!i113 0
+R11
+R2
+n@l@r_shifter
+vmux2
+R4
+R12
+!i10b 1
+!s100 R;fDH;EH8W;G`10I23JfZ0
+R6
+IllDF5C86Le;C7N<b2X]_a1
+S1
+R7
+R14
+R15
+R16
+!i122 379
+L0 39 5
+R8
+R9
+r1
+!s85 0
+31
+R10
+R17
+R18
+!i113 0
+R11
+R2
+vnCounter
+R4
+R5
+!i10b 1
+!s100 Q`LS[TA[^Y6HeObJH=E;j1
+R6
+I_GC[7M8dn83]gf;]TSNJG0
+S1
+R7
+w1717169164
+8C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/upCounter.sv
+FC:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/upCounter.sv
+!i122 375
+L0 1 13
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/upCounter.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/upCounter.sv|
+!i113 0
+R11
+R2
+nn@counter
+vreceiver_TB
+R4
+R5
+!i10b 1
+!s100 oSV@IICE[@G5FW=>ILJbO1
+R6
+I^YEl^HzOeZn[G6d^L<W>W3
+S1
+R7
+w1717195820
+8C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/Test.sv
+FC:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/Test.sv
+!i122 378
+L0 2 48
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/Test.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/Test.sv|
+!i113 0
+R11
+R2
+nreceiver_@t@b
+vreducer
+R4
+R12
+!i10b 1
+!s100 <DVJ>:D?hSf;4J1]JdUUz0
+R6
+I6Y2l[PVY>LB0@nNoXc?`L3
+S1
+R7
+R14
+R15
+R16
+!i122 379
+L0 30 8
+R8
+R9
+r1
+!s85 0
+31
+R10
+R17
+R18
+!i113 0
+R11
+R2
+vserial_receiver
+R4
+R5
+!i10b 1
+!s100 e1L0lA^MPjbL<3FRUdPU03
+R6
+I5UKnF>`U_ZMS>ICa>zaWO2
+S1
+R7
+w1717166637
+8C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/serialReciver.sv
+FC:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/serialReciver.sv
+!i122 377
+L0 1 9
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/serialReciver.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/serialReciver.sv|
+!i113 0
+R11
+R2
+vshifterRL
+R4
+R12
+!i10b 1
+!s100 jmO8OL^aR>@6f]]:boVH43
+R6
+IR=7gfzcgn``e?f_Rlhf4i3
+S1
+R7
+w1717189356
+8C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/shifterRL.sv
+FC:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/shifterRL.sv
+!i122 380
+L0 1 18
+R8
+R9
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/shifterRL.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/shifterRL.sv|
+!i113 0
+R11
+R2
+nshifter@r@l
+vSserial_receiver
+R4
+R12
+!i10b 1
+!s100 hBzU:ZYRYTRMR`@Y8BReE2
+R6
+IonaV3hYWI<i@Coo[i];Ne0
+S1
+R7
+w1717191599
+8C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/SserialReciver.sv
+FC:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/SserialReciver.sv
+!i122 382
+L0 1 8
+R8
+R9
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/SserialReciver.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/SserialReciver.sv|
+!i113 0
+R11
+R2
+n@sserial_receiver

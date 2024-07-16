@@ -1,0 +1,66 @@
+C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/test2.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/test2.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module test2
+
+Top level modules:
+	test2
+
+} {} {}} C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/higherLevel.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/higherLevel.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module higherLevel
+
+Top level modules:
+	higherLevel
+
+} {} {}} C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/dataPath.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/dataPath.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module data_path
+
+Top level modules:
+	data_path
+
+} {} {}} C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/controller.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/controller.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module controller
+
+Top level modules:
+	controller
+
+} {} {}} C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/test.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/test.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module test
+
+Top level modules:
+	test
+
+} {} {}} C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/higherLevel_64.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/higherLevel_64.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module higherLevel_64
+
+Top level modules:
+	higherLevel_64
+
+} {} {}} C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/concat.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/concat.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module concat
+
+Top level modules:
+	concat
+
+} {} {}} C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/modules.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/modules.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module counter
+-- Compiling module register
+
+Top level modules:
+	counter
+	register
+
+} {} {}} C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/higherLevel_16.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/majid/Desktop/DLD_CA#5_810101459/svCode/higherLevel_16.sv
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module higherLevel_16
+
+Top level modules:
+	higherLevel_16
+
+} {} {}}

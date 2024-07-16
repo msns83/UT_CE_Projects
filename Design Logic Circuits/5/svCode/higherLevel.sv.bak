@@ -1,0 +1,9 @@
+module higherLevel(input clk, rst,start, input [7:0] rom_in [1:32], output ready, done, output [7:0] mean);
+ 
+ wire c_en, reset, reg_en, c5  ;
+ 
+ data_path #(32) dp(c_en,clk,reset,reg_en,rom_in,c5,mean);
+ controller co(clk,c5,start,rst,ready,done,c_en,reg_en,reset);
+
+
+endmodule

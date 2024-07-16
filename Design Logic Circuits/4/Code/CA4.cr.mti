@@ -1,0 +1,70 @@
+{C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/Test.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/Test.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module receiver_TB
+
+Top level modules:
+	receiver_TB
+
+} {} {}} {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controller.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controller.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module controller
+
+Top level modules:
+	controller
+
+} {} {}} {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/serialReciver.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/serialReciver.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module serial_receiver
+
+Top level modules:
+	serial_receiver
+
+} {} {}} {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/upCounter.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/upCounter.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module nCounter
+
+Top level modules:
+	nCounter
+
+} {} {}} {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/LR_shifter.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/LR_shifter.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module LR_shifter
+
+Top level modules:
+	LR_shifter
+
+} {} {}} {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/SserialReciver.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/SserialReciver.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module Sserial_receiver
+
+Top level modules:
+	Sserial_receiver
+
+} {} {}} {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controllerS.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/controllerS.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module controllerS
+
+Top level modules:
+	controllerS
+
+} {} {}} {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/essentials.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/essentials.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module equalChecker
+-- Compiling module filpflop
+-- Compiling module reducer
+-- Compiling module mux2
+
+Top level modules:
+	equalChecker
+	filpflop
+	reducer
+	mux2
+
+} {} {}} {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/shifterRL.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/Desktop/MajidSadeghinejad_810101459_CA4/Code/shifterRL.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module shifterRL
+
+Top level modules:
+	shifterRL
+
+} {} {}}

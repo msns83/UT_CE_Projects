@@ -1,0 +1,50 @@
+{C:/Users/Majid Sadeghinejad/verilog/CA1/Q4_TB.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/verilog/CA1/Q4_TB.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module majority13_TB
+
+Top level modules:
+	majority13_TB
+
+} {} {}} {C:/Users/Majid Sadeghinejad/verilog/CA1/Q1.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/verilog/CA1/Q1.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module fibo1
+
+Top level modules:
+	fibo1
+
+} {} {}} {C:/Users/Majid Sadeghinejad/verilog/CA1/Q2.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/verilog/CA1/Q2.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module fibo2
+
+Top level modules:
+	fibo2
+
+} {} {}} {C:/Users/Majid Sadeghinejad/verilog/CA1/Q1_TB.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/verilog/CA1/Q1_TB.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module fibo_TB
+
+Top level modules:
+	fibo_TB
+
+} {} {}} {C:/Users/Majid Sadeghinejad/verilog/CA1/Q3.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/verilog/CA1/Q3.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module majority3
+
+Top level modules:
+	majority3
+
+} {} {}} {C:/Users/Majid Sadeghinejad/verilog/CA1/Q4.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/verilog/CA1/Q4.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module majority13
+
+Top level modules:
+	majority13
+
+} {} {}} {C:/Users/Majid Sadeghinejad/verilog/CA1/Q3_TB.sv} {1 {vlog -work work -vopt -sv -stats=none {C:/Users/Majid Sadeghinejad/verilog/CA1/Q3_TB.sv}
+Model Technology ModelSim SE-64 vlog 2020.4 Compiler 2020.10 Oct 13 2020
+-- Compiling module majority3_TB
+
+Top level modules:
+	majority3_TB
+
+} {} {}}

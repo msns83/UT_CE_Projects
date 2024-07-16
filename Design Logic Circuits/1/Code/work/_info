@@ -1,0 +1,219 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/modeltech64_2020.4/examples
+T_opt
+!s110 1711112259
+VCmeK9:Yo<]`:M<gdiRiTc0
+04 12 4 work majority3_TB fast 0
+=1-f2ee57b242bd-65fd8043-de-944
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1711120304
+VVXngTF=VS8kTdFfE^CEo21
+04 13 4 work majority13_TB fast 0
+=1-f2ee57b242bd-65fd9fb0-e6-2b8c
+R1
+R2
+n@_opt1
+R3
+R0
+T_opt2
+!s110 1711107917
+VhkMSHGfzJS65iM8iF=VIm1
+04 7 4 work fibo_TB fast 0
+=1-f2ee57b242bd-65fd6f4d-18f-acc
+R1
+R2
+n@_opt2
+R3
+R0
+vfibo1
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1711124921
+!i10b 1
+!s100 bEZNiAmMmbE:Lh7ngJae]2
+Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IJZJhV@UmfI7aeYBSCnQWC1
+S1
+Z7 dC:/Users/Majid Sadeghinejad/verilog/CA1
+w1711065392
+8C:/Users/Majid Sadeghinejad/verilog/CA1/Q1.sv
+FC:/Users/Majid Sadeghinejad/verilog/CA1/Q1.sv
+!i122 216
+Z8 L0 2 17
+Z9 VDg1SIo80bB@j0V0VzS_@n1
+Z10 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z11 !s108 1711124921.000000
+!s107 C:/Users/Majid Sadeghinejad/verilog/CA1/Q1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/verilog/CA1/Q1.sv|
+!i113 0
+Z12 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+vfibo2
+R4
+R5
+!i10b 1
+!s100 V=YN4DfncVKKlCUo:z9;82
+R6
+IEmS6[LC7czZb55D4kHXC32
+S1
+R7
+w1711065315
+8C:/Users/Majid Sadeghinejad/verilog/CA1/Q2.sv
+FC:/Users/Majid Sadeghinejad/verilog/CA1/Q2.sv
+!i122 218
+L0 3 6
+R9
+R10
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Majid Sadeghinejad/verilog/CA1/Q2.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/verilog/CA1/Q2.sv|
+!i113 0
+R12
+R2
+vfibo_TB
+R4
+R5
+!i10b 1
+!s100 Sn28lzS=PS=iOd29do:8o3
+R6
+IdBcGTB2AG_U>iKI9BYbSN2
+S1
+R7
+w1711065384
+8C:/Users/Majid Sadeghinejad/verilog/CA1/Q1_TB.sv
+FC:/Users/Majid Sadeghinejad/verilog/CA1/Q1_TB.sv
+!i122 217
+R8
+R9
+R10
+r1
+!s85 0
+31
+R11
+!s107 C:/Users/Majid Sadeghinejad/verilog/CA1/Q1_TB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/verilog/CA1/Q1_TB.sv|
+!i113 0
+R12
+R2
+nfibo_@t@b
+vmajority13
+R4
+Z13 !s110 1711124922
+!i10b 1
+!s100 lT?_>f9P<0NYGHQkn36o`0
+R6
+I7@Z`6lfL?3f=XfSgJbQ3U2
+S1
+R7
+w1711115745
+8C:/Users/Majid Sadeghinejad/verilog/CA1/Q4.sv
+FC:/Users/Majid Sadeghinejad/verilog/CA1/Q4.sv
+!i122 221
+L0 3 20
+R9
+R10
+r1
+!s85 0
+31
+Z14 !s108 1711124922.000000
+!s107 C:/Users/Majid Sadeghinejad/verilog/CA1/Q4.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/verilog/CA1/Q4.sv|
+!i113 0
+R12
+R2
+vmajority13_TB
+R4
+R13
+!i10b 1
+!s100 V<PFdK:>Z0`3Y<e>KPHSP2
+R6
+ILLfGeaWgXjP6dI^i>jg_A2
+S1
+R7
+w1711122687
+8C:/Users/Majid Sadeghinejad/verilog/CA1/Q4_TB.sv
+FC:/Users/Majid Sadeghinejad/verilog/CA1/Q4_TB.sv
+!i122 222
+Z15 L0 3 14
+R9
+R10
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Majid Sadeghinejad/verilog/CA1/Q4_TB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/verilog/CA1/Q4_TB.sv|
+!i113 0
+R12
+R2
+nmajority13_@t@b
+vmajority3
+R4
+R13
+!i10b 1
+!s100 Zz[4l@o3M1lUl90`SN;2e1
+R6
+I:W2>NOgV[T]5BBS3<d4H:0
+S1
+R7
+w1711067001
+8C:/Users/Majid Sadeghinejad/verilog/CA1/Q3.sv
+FC:/Users/Majid Sadeghinejad/verilog/CA1/Q3.sv
+!i122 219
+L0 3 7
+R9
+R10
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Majid Sadeghinejad/verilog/CA1/Q3.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/verilog/CA1/Q3.sv|
+!i113 0
+R12
+R2
+vmajority3_TB
+R4
+R13
+!i10b 1
+!s100 QTzdNhPNKHe]NTj4nUXzH1
+R6
+IHAl;fD:e@RaiJ?=Y<?b0]0
+S1
+R7
+w1711111886
+8C:/Users/Majid Sadeghinejad/verilog/CA1/Q3_TB.sv
+FC:/Users/Majid Sadeghinejad/verilog/CA1/Q3_TB.sv
+!i122 220
+R15
+R9
+R10
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/Majid Sadeghinejad/verilog/CA1/Q3_TB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/verilog/CA1/Q3_TB.sv|
+!i113 0
+R12
+R2
+nmajority3_@t@b

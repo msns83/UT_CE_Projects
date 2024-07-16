@@ -1,0 +1,350 @@
+m255
+K4
+z2
+!s11f vlog 2020.4 2020.10, Oct 13 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Majid Sadeghinejad/Desktop/CA1-MajidSadeghinejad-810101459/CA1-MajidSadeghinejad-810101459/Code
+T_opt
+!s110 1713984772
+V@m@Ao2l<F3W;L2CQEZRUz2
+04 12 4 work CSA_RCA16_TB fast 0
+=1-f2ee57b242bd-66295503-2a6-488
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+Z2 tCvgOpt 0
+n@_opt
+Z3 OL;O;2020.4;71
+R0
+T_opt1
+!s110 1713991470
+V_]6h<F[06=mG8F?Jje5UY2
+04 13 4 work VCSA_RCA16_TB fast 0
+=1-f2ee57b242bd-66296f2e-2-510
+R1
+R2
+n@_opt1
+R3
+T_opt2
+!s110 1713970585
+VlS0J2mYGnFci6D^=Y]=V_0
+04 8 4 work RCA16_TB fast 0
+=1-f2ee57b242bd-66291d99-164-237c
+R1
+R2
+n@_opt2
+R3
+R0
+vCSA16
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z5 !s110 1713991457
+!i10b 1
+!s100 OingO[eOY4j;<?U^aULEE0
+Z6 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I6CcniY:XAIl=OEFeNKeML0
+S1
+Z7 dC:/Users/Majid Sadeghinejad/Desktop/CA2
+w1713983625
+8C:/Users/Majid Sadeghinejad/Desktop/CA2/Q4.sv
+FC:/Users/Majid Sadeghinejad/Desktop/CA2/Q4.sv
+!i122 412
+L0 2 26
+Z8 VDg1SIo80bB@j0V0VzS_@n1
+Z9 OL;L;2020.4;71
+r1
+!s85 0
+31
+Z10 !s108 1713991457.000000
+!s107 C:/Users/Majid Sadeghinejad/Desktop/CA2/Q4.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/CA2/Q4.sv|
+!i113 0
+Z11 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R2
+n@c@s@a16
+vCSA_RCA16_TB
+R4
+R5
+!i10b 1
+!s100 4o@[HWZC]L5:WWH`FdUE<1
+R6
+I92VP4?@]P>`0b`ifOhcES3
+S1
+R7
+w1713984749
+8C:/Users/Majid Sadeghinejad/Desktop/CA2/Q4_TB.sv
+FC:/Users/Majid Sadeghinejad/Desktop/CA2/Q4_TB.sv
+!i122 413
+L0 2 31
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Majid Sadeghinejad/Desktop/CA2/Q4_TB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/CA2/Q4_TB.sv|
+!i113 0
+R11
+R2
+n@c@s@a_@r@c@a16_@t@b
+vfullAdd_TB
+R4
+Z12 !s110 1713991456
+!i10b 1
+!s100 SMf9E[6[YRLN:41hG?;X>1
+R6
+IWOLaWjAYc9O9gSiFjL]UK0
+S1
+R7
+w1713891875
+8C:/Users/Majid Sadeghinejad/Desktop/CA2/Q1_TB.sv
+FC:/Users/Majid Sadeghinejad/Desktop/CA2/Q1_TB.sv
+!i122 406
+L0 2 23
+R8
+R9
+r1
+!s85 0
+31
+Z13 !s108 1713991456.000000
+!s107 C:/Users/Majid Sadeghinejad/Desktop/CA2/Q1_TB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/CA2/Q1_TB.sv|
+!i113 0
+R11
+R2
+nfull@add_@t@b
+vfullAdder
+R4
+R12
+!i10b 1
+!s100 fPl32[5bBmQY[;mKD8GYD3
+R6
+IPS>=31708CL:J;^[B239Z0
+S1
+R7
+w1713891865
+8C:/Users/Majid Sadeghinejad/Desktop/CA2/Q1.sv
+FC:/Users/Majid Sadeghinejad/Desktop/CA2/Q1.sv
+!i122 405
+Z14 L0 2 10
+R8
+R9
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Majid Sadeghinejad/Desktop/CA2/Q1.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/CA2/Q1.sv|
+!i113 0
+R11
+R2
+nfull@adder
+vmux2
+R4
+R5
+!i10b 1
+!s100 7MBDE?Lde17:17:7W^P[>3
+R6
+IeIkWLF<<ai;meUdLMEfZ[3
+S1
+R7
+w1713984687
+Z15 8C:/Users/Majid Sadeghinejad/Desktop/CA2/MUX.sv
+Z16 FC:/Users/Majid Sadeghinejad/Desktop/CA2/MUX.sv
+!i122 411
+R14
+R8
+R9
+r1
+!s85 0
+31
+R10
+Z17 !s107 C:/Users/Majid Sadeghinejad/Desktop/CA2/MUX.sv|
+Z18 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/CA2/MUX.sv|
+!i113 0
+R11
+R2
+vmux2_1
+R4
+!s110 1713979793
+!i10b 1
+!s100 Y4dol1_17CLbUaJN2bdi70
+R6
+I:g[i=f;JJX6JU5ncglZcj1
+S1
+R7
+w1713973368
+R15
+R16
+!i122 172
+Z19 L0 2 9
+R8
+R9
+r1
+!s85 0
+31
+!s108 1713979793.000000
+R17
+R18
+!i113 0
+R11
+R2
+vRCA16
+R4
+R5
+!i10b 1
+!s100 Z1Ql3IM5oKh2NNVnF1gOB3
+R6
+IBeiTC>D00ejQFKJ5OaFN[2
+S1
+R7
+w1713901535
+8C:/Users/Majid Sadeghinejad/Desktop/CA2/Q3.sv
+FC:/Users/Majid Sadeghinejad/Desktop/CA2/Q3.sv
+!i122 409
+R19
+R8
+R9
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Majid Sadeghinejad/Desktop/CA2/Q3.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/CA2/Q3.sv|
+!i113 0
+R11
+R2
+n@r@c@a16
+vRCA16_TB
+R4
+R5
+!i10b 1
+!s100 IgGkMN:5FV1o`zfoFLXgE2
+R6
+IK>;Ya7z>KIRQm@JMTAQ`Z2
+S1
+R7
+w1713970558
+8C:/Users/Majid Sadeghinejad/Desktop/CA2/Q3_TB.sv
+FC:/Users/Majid Sadeghinejad/Desktop/CA2/Q3_TB.sv
+!i122 410
+L0 2 24
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Majid Sadeghinejad/Desktop/CA2/Q3_TB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/CA2/Q3_TB.sv|
+!i113 0
+R11
+R2
+n@r@c@a16_@t@b
+vRCA4
+R4
+R12
+!i10b 1
+!s100 PX5o^XOBIOFU2z@]SKXT52
+R6
+InI@h5_lF9MA96e2KJRD]j1
+S1
+R7
+w1713901625
+8C:/Users/Majid Sadeghinejad/Desktop/CA2/Q2.sv
+FC:/Users/Majid Sadeghinejad/Desktop/CA2/Q2.sv
+!i122 407
+R19
+R8
+R9
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Majid Sadeghinejad/Desktop/CA2/Q2.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/CA2/Q2.sv|
+!i113 0
+R11
+R2
+n@r@c@a4
+vRCA4_TB
+R4
+R12
+!i10b 1
+!s100 WT]dH`@IERhOI73k@nRlJ2
+R6
+I:cKMk5>3gZECZdZMHk=362
+S1
+R7
+w1713901608
+8C:/Users/Majid Sadeghinejad/Desktop/CA2/Q2_TB.sv
+FC:/Users/Majid Sadeghinejad/Desktop/CA2/Q2_TB.sv
+!i122 408
+L0 2 21
+R8
+R9
+r1
+!s85 0
+31
+R13
+!s107 C:/Users/Majid Sadeghinejad/Desktop/CA2/Q2_TB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/CA2/Q2_TB.sv|
+!i113 0
+R11
+R2
+n@r@c@a4_@t@b
+vV_CSA16
+R4
+R5
+!i10b 1
+!s100 bLT3iI3kFo^AmQTo<?H1`1
+R6
+I_zQEGMXKbUnUVSVOiCDkd3
+S1
+R7
+w1713991431
+8C:/Users/Majid Sadeghinejad/Desktop/CA2/Q5.sv
+FC:/Users/Majid Sadeghinejad/Desktop/CA2/Q5.sv
+!i122 414
+L0 2 69
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Majid Sadeghinejad/Desktop/CA2/Q5.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/CA2/Q5.sv|
+!i113 0
+R11
+R2
+n@v_@c@s@a16
+vVCSA_RCA16_TB
+R4
+R5
+!i10b 1
+!s100 <lQh_SJObESUCgBBG<91Q1
+R6
+IeD^D3C@<15W`NVe@6K9hD3
+S1
+R7
+w1713991426
+8C:/Users/Majid Sadeghinejad/Desktop/CA2/Q5_TB.sv
+FC:/Users/Majid Sadeghinejad/Desktop/CA2/Q5_TB.sv
+!i122 415
+L0 2 30
+R8
+R9
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/Majid Sadeghinejad/Desktop/CA2/Q5_TB.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|C:/Users/Majid Sadeghinejad/Desktop/CA2/Q5_TB.sv|
+!i113 0
+R11
+R2
+n@v@c@s@a_@r@c@a16_@t@b
