@@ -1,0 +1,139 @@
+POST signup ? username <honarmand ali> password <bro baba> mode <atist>
+POST signup ? username <honarmand ali> <bro baba> mode <artist>
+POST signup ? username honarmand ali> password <bro baba> mode <artist>
+GET musics ? 
+POST signup ? mode <artist> password <bro baba>  username <honarmand ali> 
+GET musics ? 
+POST signup ? username <honarmand ali> password <bro baba> mode <artist>
+POST music ? title <salam salam> path <nemidanam !> year <boogh> album <doogh> tags <salam; doogh> duration <5t:2t:1t>
+POST music ? title <salam salam> path <nemidanam !> year <1390> album <doogh> tags <salam; doogh> duration <5t:2t:1t>
+POST music ? title <salam salam> path <nemidanam !> album <doogh> tags <salam; doogh> duration <5t:2t:1t>
+POST music ? title <salam salam> path <nemidanam !> year <1390> album <doogh> tags <salam; doogh> duration <05:02:11>
+POST music ? album <choogh> title <hey...>  year <1312>  tags <yaroo;salam> duration <22:12:14> path <etelaie nadaram>
+POST music ? title <salam olaghe aziz> path <hanoz nemidanam !> year <1387> album <doogh> tags <bro;bia> duration <00:12:11>
+GET registered_musics ? salam <2>
+GET registered_musics ?
+DELETE music ?
+DELETE music ? id <2>
+DELETE music ? id <6>
+GET musics ? tt to too
+GET musics ? tt too
+GET musics ? tt <3>
+GET musics ? 
+GET musics ? id <2>
+GET musics ? id <3>
+POST logout ? hello <tt>
+POST logout ?
+POST logout ?
+POST signup ? username <honarmand ali> password <bro baba> mode <artist>
+POST signup ? username <honarmand hassan> password <bro baba> mode <artist>
+GET users ? tt <2>
+GET users ?
+GET users ? id <3>
+GET users ? id <1>
+POST music ? title <bro 1> path <hanoz nemidanam !> year <1367> album <doogh> tags <bro;nia> duration <00:12:11>
+POST music ? title <bro 2> path <hanoz nemidanam !> year <1357> album <doogh> tags <bro;hia> duration <00:12:11>
+POST music ? title <bro 3> path <hanoz nemidanam !> year <1347> album <doogh> tags <bro;sia> duration <00:12:11>
+POST music ? title <naro 1> path <hanoz nemidanam !> year <1347> album <doogh> tags <bro;sia> duration <00:12:11>
+POST music ? title <naro 2> path <hanoz nemidanam !> year <1347> album <doogh> tags <bro;sia> duration <00:12:11>
+POST music ? title <naro 3> path <hanoz nemidanam !> year <1347> album <doogh> tags <bro;sia> duration <00:12:11>
+GET musics ?
+GET search_music ?
+DELETE music ? id <4>
+GET musics ?
+GET registered_musics ?
+POST logout ?
+POST signup ? username <honarmand kafgir> password <bro baba > mode <artist>
+POST logout ?
+POST login ?  password <bro baba> username <honarmand kafgir>
+POST login ? username <honarmand kafgir> password <bro baba >
+GET users ?
+GET users ? id <3>
+POST playlist ? name <{name}>
+POST logout ?
+POST signup ? username <bihonar hooshang> password <ramz> mode <user>
+GET users ?
+POST playlist ? name <Sobh>
+POST playlist ? name <Zohr>
+POST playlist ? name <Shab>
+POST playlist ? name <Sobh>
+GET users ? id <4>
+GET musics ?
+PUT add_playlist ? name <Chert> id <8>
+PUT add_playlist ? name <Chert> id <5>
+PUT add_playlist ? name <Sobh> id <5>
+PUT add_playlist ? name <Sobh> id <8>
+PUT add_playlist ? name <Sobh> id <1>
+PUT add_playlist ? name <Zohr> id <6>
+PUT add_playlist ? name <Zohr> id <3>
+GET users ? id <4>
+GET users ?
+GET playlist ? id <2>
+GET playlist ? id <4>
+GET playlist ? id <9>
+GET musics ? id <3>
+GET search_music ? name <{name}> artist <{name}> tag <{tag}>
+GET search_music ? name <{name}> artist <{name}> tag <{tag}> goog <rr>
+GET search_music ? name <{name}> artist <{name}> goog <rr>
+GET search_music ? name <o> 
+GET search_music ? 
+GET search_music ? name <o> artist <h> 
+GET search_music ? artist <hassan> 
+GET musics ? id <3>
+GET search_music ? tag <nia> 
+GET search_music ? tag <hia> name <b>
+GET search_music ? tag <doogh>
+GET search_music ? tag < doogh>
+GET registered_musics ?
+GET playlist ? id <4>
+POST logout ?
+POST signup ? username <bihonar kasra> password <ramz> mode <user>
+GET users ?
+POST follow ? id <11>
+POST unfollow ? id <12>
+POST follow ? id <5>
+POST unfollow ? id <5>
+POST follow ? id <3>
+POST follow ? id <3>
+POST unfollow ? id <2>
+POST unfollow ? id <3>
+GET users ? id <5>
+POST follow ? id <3>
+POST follow ? id <4>
+POST follow ? id <1>
+POST like ? id <7>
+POST like ? id <8>
+POST like ? id <5>
+POST logout ?
+POST signup ? mode <user> password <hey...>  username <yaboo>
+GET likes ?
+POST like ? id <3>
+POST like ? id <1>
+POST like ? id <5>
+GET likes ?
+POST like ? id <6>
+POST like ? id <7>
+POST like ? id <8>
+POST like ? id <9>
+GET likes ?
+POST logout ?
+POST login ? username <bihonar hooshang> password <ramz>
+GET users ?
+GET users ? id <5>
+GET playlist ? id <5>
+GET playlist ? id <4>
+POST follow ? id <5>
+DELETE playlist ? name <Shab>
+GET users ? id <5>
+GET playlist ? id <4>
+GET playlist ? id <5> name <Sobh>
+GET playlist ? id <4> name <Sobh>
+GET playlist ? id <2> name <Sobh>
+GET musics ?
+POST like ? id <5>
+POST like ? id <2>
+POST like ? id <3>
+POST like ? id <3>
+GET recommendations ?
+GET likes ?
+POST logout ?

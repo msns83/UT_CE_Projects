@@ -1,0 +1,40 @@
+# BomberMan
+AP exercise for event-driven programming
+
+- [X]  multi file
+- [X]  add tool.cpp to game object
+- [X]  organize files  
+- [X]  change the shapes with images
+- [X]  make file
+- [X]  code optimize
+- [X]  map reader
+- [X]  window handling  
+- [X]  print blocks
+- [X]  print player
+- [X]  player walk ability
+- [X]  blocks blocking ability
+- [X]  bomb planting ability (bombs limitation)
+- [X]  bomb explosion ability
+- [X]  enemies printing
+- [X]  enemies movement
+- [X]  enemies movement automation
+- [X]  enemies and player interaction
+- [X]  print lives
+- [X]  game over by lives
+- [X]  bomb damage ability (player, enemy, temp blocks)
+- [X]  print keys
+- [X]  gain keys
+- [X]  show keys
+- [X]  print door
+- [X]  door, player, keys interaction
+- [X]  door, player, keys interaction
+- [X]  win
+- [X]  lose by time
+- [X]  text of lives , time , keys
+- [X]  print powerup 2
+- [X]  gain powerup 2
+- [X]  powerup 2
+- [X]  print powerup 3
+- [X]  gain powerup 3
+- [X]  powerup 3
+- [X] change the background color

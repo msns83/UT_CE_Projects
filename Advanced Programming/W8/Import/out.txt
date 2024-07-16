@@ -1,0 +1,297 @@
+Bad Request
+Bad Request
+Bad Request
+Permission Denied
+OK
+Empty
+Permission Denied
+Bad Request
+Bad Request
+Bad Request
+OK
+OK
+OK
+Bad Request
+ID, Name, Artist, Year, Album, Tags, Duration
+1, salam salam, honarmand ali, 1390, doogh, salam; doogh, 05:02:11
+2, hey..., honarmand ali, 1312, choogh, yaroo;salam, 22:12:14
+3, salam olaghe aziz, honarmand ali, 1387, doogh, bro;bia, 00:12:11
+Bad Request
+OK
+Not Found
+Bad Request
+Bad Request
+Bad Request
+ID, Name, Artist
+1, salam salam, honarmand ali
+3, salam olaghe aziz, honarmand ali
+Not Found
+ID, Name, Artist, Year, Album, Tags, Duration
+3, salam olaghe aziz, honarmand ali, 1387, doogh, bro;bia, 00:12:11
+Bad Request
+OK
+Permission Denied
+Bad Request
+OK
+Bad Request
+ID, Mode, Username, Playlists_number/Songs_number
+1, artist, honarmand ali, 2
+2, artist, honarmand hassan, 0
+Not Found
+ID: 1
+Mode: artist
+Username: honarmand ali
+Followings: 
+Followers: 
+Songs: salam salam, salam olaghe aziz
+OK
+OK
+OK
+OK
+OK
+OK
+ID, Name, Artist
+1, salam salam, honarmand ali
+3, salam olaghe aziz, honarmand ali
+4, bro 1, honarmand hassan
+5, bro 2, honarmand hassan
+6, bro 3, honarmand hassan
+7, naro 1, honarmand hassan
+8, naro 2, honarmand hassan
+9, naro 3, honarmand hassan
+Permission Denied
+OK
+ID, Name, Artist
+1, salam salam, honarmand ali
+3, salam olaghe aziz, honarmand ali
+5, bro 2, honarmand hassan
+6, bro 3, honarmand hassan
+7, naro 1, honarmand hassan
+8, naro 2, honarmand hassan
+9, naro 3, honarmand hassan
+ID, Name, Artist, Year, Album, Tags, Duration
+5, bro 2, honarmand hassan, 1357, doogh, bro;hia, 00:12:11
+6, bro 3, honarmand hassan, 1347, doogh, bro;sia, 00:12:11
+7, naro 1, honarmand hassan, 1347, doogh, bro;sia, 00:12:11
+8, naro 2, honarmand hassan, 1347, doogh, bro;sia, 00:12:11
+9, naro 3, honarmand hassan, 1347, doogh, bro;sia, 00:12:11
+OK
+OK
+OK
+Permission Denied
+OK
+ID, Mode, Username, Playlists_number/Songs_number
+1, artist, honarmand ali, 2
+2, artist, honarmand hassan, 5
+3, artist, honarmand kafgir, 0
+ID: 3
+Mode: artist
+Username: honarmand kafgir
+Followings: 
+Followers: 
+Songs: 
+Permission Denied
+OK
+OK
+ID, Mode, Username, Playlists_number/Songs_number
+1, artist, honarmand ali, 2
+2, artist, honarmand hassan, 5
+3, artist, honarmand kafgir, 0
+4, user, bihonar hooshang, 0
+OK
+OK
+OK
+Bad Request
+ID: 4
+Mode: user
+Username: bihonar hooshang
+Followings: 
+Followers: 
+Playlists: Sobh, Zohr, Shab
+ID, Name, Artist
+1, salam salam, honarmand ali
+3, salam olaghe aziz, honarmand ali
+5, bro 2, honarmand hassan
+6, bro 3, honarmand hassan
+7, naro 1, honarmand hassan
+8, naro 2, honarmand hassan
+9, naro 3, honarmand hassan
+Not Found
+Not Found
+OK
+OK
+OK
+OK
+OK
+ID: 4
+Mode: user
+Username: bihonar hooshang
+Followings: 
+Followers: 
+Playlists: Sobh, Zohr, Shab
+ID, Mode, Username, Playlists_number/Songs_number
+1, artist, honarmand ali, 2
+2, artist, honarmand hassan, 5
+3, artist, honarmand kafgir, 0
+4, user, bihonar hooshang, 3
+Bad Request
+Playlist_name, Songs_number, Duration
+Shab, 0, 00:00:00
+Sobh, 3, 05:26:33
+Zohr, 2, 00:24:22
+Not Found
+ID, Name, Artist, Year, Album, Tags, Duration
+3, salam olaghe aziz, honarmand ali, 1387, doogh, bro;bia, 00:12:11
+Empty
+Bad Request
+Bad Request
+ID, Name, Artist
+3, salam olaghe aziz, honarmand ali
+5, bro 2, honarmand hassan
+6, bro 3, honarmand hassan
+7, naro 1, honarmand hassan
+8, naro 2, honarmand hassan
+9, naro 3, honarmand hassan
+ID, Name, Artist
+1, salam salam, honarmand ali
+3, salam olaghe aziz, honarmand ali
+5, bro 2, honarmand hassan
+6, bro 3, honarmand hassan
+7, naro 1, honarmand hassan
+8, naro 2, honarmand hassan
+9, naro 3, honarmand hassan
+ID, Name, Artist
+3, salam olaghe aziz, honarmand ali
+5, bro 2, honarmand hassan
+6, bro 3, honarmand hassan
+7, naro 1, honarmand hassan
+8, naro 2, honarmand hassan
+9, naro 3, honarmand hassan
+ID, Name, Artist
+5, bro 2, honarmand hassan
+6, bro 3, honarmand hassan
+7, naro 1, honarmand hassan
+8, naro 2, honarmand hassan
+9, naro 3, honarmand hassan
+ID, Name, Artist, Year, Album, Tags, Duration
+3, salam olaghe aziz, honarmand ali, 1387, doogh, bro;bia, 00:12:11
+Empty
+ID, Name, Artist
+5, bro 2, honarmand hassan
+Empty
+ID, Name, Artist
+1, salam salam, honarmand ali
+Permission Denied
+Playlist_name, Songs_number, Duration
+Shab, 0, 00:00:00
+Sobh, 3, 05:26:33
+Zohr, 2, 00:24:22
+OK
+OK
+ID, Mode, Username, Playlists_number/Songs_number
+1, artist, honarmand ali, 2
+2, artist, honarmand hassan, 5
+3, artist, honarmand kafgir, 0
+4, user, bihonar hooshang, 3
+5, user, bihonar kasra, 0
+Not Found
+Not Found
+Bad Request
+Bad Request
+OK
+Bad Request
+Bad Request
+OK
+ID: 5
+Mode: user
+Username: bihonar kasra
+Followings: 
+Followers: 
+Playlists: 
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+OK
+Empty
+OK
+OK
+OK
+ID, Name, Artist
+3, salam olaghe aziz, honarmand ali
+1, salam salam, honarmand ali
+5, bro 2, honarmand hassan
+OK
+OK
+OK
+OK
+ID, Name, Artist
+3, salam olaghe aziz, honarmand ali
+1, salam salam, honarmand ali
+5, bro 2, honarmand hassan
+6, bro 3, honarmand hassan
+7, naro 1, honarmand hassan
+8, naro 2, honarmand hassan
+9, naro 3, honarmand hassan
+OK
+OK
+ID, Mode, Username, Playlists_number/Songs_number
+1, artist, honarmand ali, 2
+2, artist, honarmand hassan, 5
+3, artist, honarmand kafgir, 0
+4, user, bihonar hooshang, 3
+5, user, bihonar kasra, 0
+6, user, yaboo, 0
+ID: 5
+Mode: user
+Username: bihonar kasra
+Followings: honarmand kafgir, bihonar hooshang, honarmand ali
+Followers: 
+Playlists: 
+Empty
+Playlist_name, Songs_number, Duration
+Shab, 0, 00:00:00
+Sobh, 3, 05:26:33
+Zohr, 2, 00:24:22
+OK
+OK
+ID: 5
+Mode: user
+Username: bihonar kasra
+Followings: honarmand kafgir, bihonar hooshang, honarmand ali
+Followers: bihonar hooshang
+Playlists: 
+Playlist_name, Songs_number, Duration
+Sobh, 3, 05:26:33
+Zohr, 2, 00:24:22
+Not Found
+ID, Name, Artist
+5, bro 2, honarmand hassan
+8, naro 2, honarmand hassan
+1, salam salam, honarmand ali
+Bad Request
+ID, Name, Artist
+1, salam salam, honarmand ali
+3, salam olaghe aziz, honarmand ali
+5, bro 2, honarmand hassan
+6, bro 3, honarmand hassan
+7, naro 1, honarmand hassan
+8, naro 2, honarmand hassan
+9, naro 3, honarmand hassan
+OK
+Not Found
+OK
+Bad Request
+ID, Name, Artist, Likes
+7, naro 1, honarmand hassan, 2
+8, naro 2, honarmand hassan, 2
+1, salam salam, honarmand ali, 1
+6, bro 3, honarmand hassan, 1
+9, naro 3, honarmand hassan, 1
+ID, Name, Artist
+5, bro 2, honarmand hassan
+3, salam olaghe aziz, honarmand ali
+OK

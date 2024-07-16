@@ -1,0 +1,14 @@
+4 3
+L R T
+L R B
+T L R
+B L R
+2 2 1
+-1 1 2
+2 1 -1 1
+1 2 0 -1
+
+X Z X
+Z X Z
+X - -
+Z X Z

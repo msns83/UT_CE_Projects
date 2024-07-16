@@ -1,0 +1,2 @@
+./Import/pic1.bmp ./Import/out1.bmp
+./Import/pic2.bmp ./Import/out2.bmp

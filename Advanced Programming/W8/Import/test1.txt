@@ -1,0 +1,20 @@
+POST signup ? username <majid> password <1234> mode <ser>
+POST signup ? username <adam> password <5678> mode <atist>
+POST signup ? username <Misagh> password <meow> mode <user>
+POST logout ?
+POST signup ? username <isah> password <meow> mode <artist>
+POST logout ?
+POST login ? username <Misagh> password <meoow>
+POST login ? username <Misagh> password <meow>
+GET musics ? 
+GET musics ? id <5>
+GET users ?
+GET users ? id <1>
+POST playlist ? name <Rock n Roll>
+GET users ? id <1>
+PUT add_playlist ? name <Rock n Roll> id <11>
+GET playlist ? id <1>
+GET search_music ? name <ing> artist <Park>
+POST logout ?
+POST login ? username <isah> password <meow>
+POST music ? title <How I Got Home> path <~/How_I_Got_Home.mp3> year <2023> album <How I Got Home> tags <instrumental;classic;chill> duration <00:04:12>

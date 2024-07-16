@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SPUTIFY</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #e9e9e9;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .signup-container {
+            text-align: center;
+            background-color: rgba(232, 232, 232, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.626);
+            padding: 30px;
+            width: 30%;
+            border-radius: 10px;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #19a6f7;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 10px;
+            color: #19a6f7;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #19a6f7;
+            border-radius: 5px;
+            color: black;
+        }
+
+        select {
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            border: 1px solid #19a6f7;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        p {
+            margin-top: 20px;
+            color: #3498db;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function signUp() {
+
+            var success;
+            var text;
+        <%
+            if (context["result"] == "OK") {
+                cout << "success = 0;";
+            } else if (context["result"] == "Permission Denied") {
+                cout << "success = 1;\n";
+                cout << "text = \"you are logged in \" \n;";
+            } else if (context["result"] == "Bad Request") {
+                cout << "success = 2;\n";
+                cout << "text = \"something is Wrong or the username exists.\" ; \n";
+            }
+        %>
+
+            if (success === 1) {
+                alert(text);
+                window.location.replace("/");
+            }
+            if (success === 2) {
+                alert(text);
+            }
+        }
+
+        window.onload = function () {
+            signUp();
+        };
+    </script>
+</head>
+
+<body>
+    <div class="signup-container">
+        <img src="music.png" alt="Music Icon">
+        <h1>Create Your Account</h1>
+        <form action="/signup" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="mode">User Type</label>
+            <select id="mode" name="mode" required>
+                <option value="user">User</option>
+                <option value="artist">Artist</option>
+            </select>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="/login">Log in</a></p>
+    </div>
+</body>
+
+</html>

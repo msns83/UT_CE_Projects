@@ -1,0 +1,29 @@
+Bad Request
+Bad Request
+OK
+OK
+OK
+OK
+Permission Denied
+OK
+Empty
+Not Found
+ID, Mode, Username, Playlists_number/Songs_number
+1, user, Misagh, 0
+2, artist, isah, 0
+ID: 1
+Mode: user
+Username: Misagh
+Playlists: 
+OK
+ID: 1
+Mode: user
+Username: Misagh
+Playlists: Rock n Roll
+Not Found
+Playlist_name, Songs_number, Duration
+Rock n Roll, 0, 00:00:00
+Empty
+OK
+OK
+OK

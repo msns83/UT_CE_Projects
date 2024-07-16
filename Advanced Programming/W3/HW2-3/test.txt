@@ -1,0 +1,11 @@
+4 3
+T L R
+B T T
+T B B
+B L R
+1 2 2
+1 2 2
+2 2 -1 1
+2 -1 1 1
+
+No Solution!

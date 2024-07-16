@@ -1,0 +1,11 @@
+Name,Specialty,Visit Fee,Visit Duration,Wait Time Average,Days Available
+MohsenMoghadam,Cardiology,200,20,30,Mon-8-13$Wed-15-20
+Mohammadam,Cardiology,100,20,30,Sat-7-10$Mon-8-13$Wed-15-20
+adam,Cardiology,50,20,30,Wed-8-13$Fri-15-20
+doc,Endocrinology,200,85,20,Sun-6-8
+Hassan,Orthopedics,50,15,45,Sun-6-11
+mamad,goog,2000,200,30,Mon-4-23$Sat-20-21
+mamal,Egy,2000,20,30,Mon-4-23$Sat-20-21
+HadiZarrin,Endocrinology,250,85,35,Sun-5-8
+Mohsen,goog,200,200,30,Wed-15-20$Sat-7-10$Mon-8-13
+intern,Endocrinology,250,15,45,Sun-6-11
