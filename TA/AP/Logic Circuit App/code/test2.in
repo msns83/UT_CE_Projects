@@ -1,0 +1,20 @@
+new_module type1 4
+add xor 1 1 2 3
+add nand 2 4 5 6
+add or 3 7 8 9
+add not 4 10 11
+connect in0 1
+connect in1 2
+connect in2 4
+connect in3 5
+connect 3 7
+connect 6 8
+connect 9 10
+connect 11 out
+end_module
+add type1 1 1 2 3 4 5
+put 1 0
+put 2 0
+put 3 1
+put 4 1
+print 1
