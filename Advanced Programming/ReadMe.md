@@ -10,19 +10,21 @@ This repository contains code files, project descriptions, and study materials f
 
 ## Projects  
 
-### 1. Project Name 1  
+### 1. Subway Line Selector  
 **Goals:**  
-- Target 1  
-- Target 2  
-- Target 3  
+- introduction to C++  
+- introduction to IO and testing
+- working with Vectors
 
-### 2. Project Name 2  
-**Goals:**  
-- Target 1  
-- Target 2  
-- Target 3  
+### 2. Recursion Problems
 
-### 3. Project Name 3  
+**Goals:** 
+
+- introduction to Recursion  
+- using recursion in real world problems    
+
+### 3. Hospital Appointment Booking app 
+
 **Goals:**  
 - Target 1  
 - Target 2  

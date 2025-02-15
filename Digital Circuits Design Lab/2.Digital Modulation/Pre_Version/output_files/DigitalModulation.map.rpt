@@ -1,0 +1,761 @@
+Analysis & Synthesis report for DigitalModulation
+Fri Nov 29 11:27:29 2024
+Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |DigitalModulation|DDS:inst8|phase_accumulator:PA|ps
+ 11. State Machine - |DigitalModulation|one_pulser:inst1|CS
+ 12. State Machine - |DigitalModulation|one_pulser:inst11|CS
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|dpram_ot01:FIFOram|altsyncram_orj1:altsyncram2
+ 17. Parameter Settings for User Entity Instance: MessageProcess:inst6
+ 18. Parameter Settings for User Entity Instance: MessageProcess:inst6|UpCounter:SineMaker
+ 19. Parameter Settings for User Entity Instance: MessageProcess:inst6|UpCounter:SineCounter
+ 20. Parameter Settings for User Entity Instance: fifo1:inst|scfifo:scfifo_component
+ 21. Parameter Settings for User Entity Instance: one_pulser:inst11
+ 22. Parameter Settings for User Entity Instance: one_pulser:inst1
+ 23. Parameter Settings for User Entity Instance: DDS:inst8
+ 24. Parameter Settings for User Entity Instance: DDS:inst8|phase_accumulator:PA
+ 25. Parameter Settings for User Entity Instance: DDS:inst8|phase_accumulator:PA|up_counter:UC1
+ 26. Parameter Settings for User Entity Instance: DDS:inst8|two_s_complement:compl1
+ 27. Parameter Settings for User Entity Instance: DDS:inst8|two_one_mux:mux1
+ 28. Parameter Settings for User Entity Instance: DDS:inst8|ROM:sine_ROM
+ 29. Parameter Settings for User Entity Instance: DDS:inst8|two_one_mux:mux2
+ 30. scfifo Parameter Settings by Entity Instance
+ 31. Port Connectivity Checks: "DDS:inst8|two_one_mux:mux2"
+ 32. Port Connectivity Checks: "MessageProcess:inst6|UpCounter:SineCounter"
+ 33. Port Connectivity Checks: "MessageProcess:inst6|UpCounter:SineMaker"
+ 34. Port Connectivity Checks: "MessageProcess:inst6|ShiftRegister:MSG_REG"
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
+ 37. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++------------------------------------+------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Nov 29 11:27:29 2024    ;
+; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Revision Name                      ; DigitalModulation                        ;
+; Top-level Entity Name              ; DigitalModulation                        ;
+; Family                             ; Cyclone II                               ;
+; Total logic elements               ; 173                                      ;
+;     Total combinational functions  ; 171                                      ;
+;     Dedicated logic registers      ; 77                                       ;
+; Total registers                    ; 77                                       ;
+; Total pins                         ; 18                                       ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 40                                       ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
++------------------------------------+------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C20F484C7       ;                    ;
+; Top-level entity name                                                      ; DigitalModulation  ; DigitalModulation  ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                  ; Library ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+---------+
+; one_pulser.v                     ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/one_pulser.v             ;         ;
+; UpCounter.v                      ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/UpCounter.v              ;         ;
+; up_counter.v                     ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/up_counter.v             ;         ;
+; two_s_complement.v               ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/two_s_complement.v       ;         ;
+; two_one_mux.v                    ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/two_one_mux.v            ;         ;
+; sign_to_two_s_comp.v             ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/sign_to_two_s_comp.v     ;         ;
+; ShiftRegister.v                  ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/ShiftRegister.v          ;         ;
+; ROM.v                            ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/ROM.v                    ;         ;
+; phase_accumulator.v              ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/phase_accumulator.v      ;         ;
+; MUX8.v                           ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/MUX8.v                   ;         ;
+; MUX.v                            ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/MUX.v                    ;         ;
+; MessageProcess.v                 ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/MessageProcess.v         ;         ;
+; FrequencyDivider.v               ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/FrequencyDivider.v       ;         ;
+; FreqDivHL.v                      ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/FreqDivHL.v              ;         ;
+; DigitalModulation.bdf            ; yes             ; User Block Diagram/Schematic File  ; C:/Users/DLD lab 2/Desktop/dld_lab_4/DigitalModulation.bdf    ;         ;
+; DDS.v                            ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/DDS.v                    ;         ;
+; dac_pwm.v                        ; yes             ; User Verilog HDL File              ; C:/Users/DLD lab 2/Desktop/dld_lab_4/dac_pwm.v                ;         ;
+; fifo1.v                          ; yes             ; User Wizard-Generated File         ; C:/Users/DLD lab 2/Desktop/dld_lab_4/fifo1.v                  ;         ;
+; scfifo.tdf                       ; yes             ; Megafunction                       ; c:/altera/12.1/quartus/libraries/megafunctions/scfifo.tdf     ;         ;
+; a_regfifo.inc                    ; yes             ; Megafunction                       ; c:/altera/12.1/quartus/libraries/megafunctions/a_regfifo.inc  ;         ;
+; a_dpfifo.inc                     ; yes             ; Megafunction                       ; c:/altera/12.1/quartus/libraries/megafunctions/a_dpfifo.inc   ;         ;
+; a_i2fifo.inc                     ; yes             ; Megafunction                       ; c:/altera/12.1/quartus/libraries/megafunctions/a_i2fifo.inc   ;         ;
+; a_fffifo.inc                     ; yes             ; Megafunction                       ; c:/altera/12.1/quartus/libraries/megafunctions/a_fffifo.inc   ;         ;
+; a_f2fifo.inc                     ; yes             ; Megafunction                       ; c:/altera/12.1/quartus/libraries/megafunctions/a_f2fifo.inc   ;         ;
+; aglobal121.inc                   ; yes             ; Megafunction                       ; c:/altera/12.1/quartus/libraries/megafunctions/aglobal121.inc ;         ;
+; db/scfifo_s931.tdf               ; yes             ; Auto-Generated Megafunction        ; C:/Users/DLD lab 2/Desktop/dld_lab_4/db/scfifo_s931.tdf       ;         ;
+; db/a_dpfifo_3g31.tdf             ; yes             ; Auto-Generated Megafunction        ; C:/Users/DLD lab 2/Desktop/dld_lab_4/db/a_dpfifo_3g31.tdf     ;         ;
+; db/a_fefifo_m4f.tdf              ; yes             ; Auto-Generated Megafunction        ; C:/Users/DLD lab 2/Desktop/dld_lab_4/db/a_fefifo_m4f.tdf      ;         ;
+; db/cntr_oj7.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DLD lab 2/Desktop/dld_lab_4/db/cntr_oj7.tdf          ;         ;
+; db/dpram_ot01.tdf                ; yes             ; Auto-Generated Megafunction        ; C:/Users/DLD lab 2/Desktop/dld_lab_4/db/dpram_ot01.tdf        ;         ;
+; db/altsyncram_orj1.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/DLD lab 2/Desktop/dld_lab_4/db/altsyncram_orj1.tdf   ;         ;
+; db/cntr_cjb.tdf                  ; yes             ; Auto-Generated Megafunction        ; C:/Users/DLD lab 2/Desktop/dld_lab_4/db/cntr_cjb.tdf          ;         ;
++----------------------------------+-----------------+------------------------------------+---------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 173   ;
+;                                             ;       ;
+; Total combinational functions               ; 171   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 53    ;
+;     -- 3 input functions                    ; 50    ;
+;     -- <=2 input functions                  ; 68    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 111   ;
+;     -- arithmetic mode                      ; 60    ;
+;                                             ;       ;
+; Total registers                             ; 77    ;
+;     -- Dedicated logic registers            ; 77    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 18    ;
+; Total memory bits                           ; 40    ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out                             ; 66    ;
+; Total fan-out                               ; 822   ;
+; Average fan-out                             ; 3.03  ;
++---------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                               ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                  ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |DigitalModulation                              ; 171 (1)           ; 77 (0)       ; 40          ; 0            ; 0       ; 0         ; 18   ; 0            ; |DigitalModulation                                                                                                                                   ;              ;
+;    |DDS:inst8|                                  ; 57 (2)            ; 11 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|DDS:inst8                                                                                                                         ;              ;
+;       |ROM:sine_ROM|                            ; 29 (29)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|DDS:inst8|ROM:sine_ROM                                                                                                            ;              ;
+;       |phase_accumulator:PA|                    ; 11 (3)            ; 11 (4)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|DDS:inst8|phase_accumulator:PA                                                                                                    ;              ;
+;          |up_counter:UC1|                       ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|DDS:inst8|phase_accumulator:PA|up_counter:UC1                                                                                     ;              ;
+;       |sign_to_two_s_comp:compl2|               ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|DDS:inst8|sign_to_two_s_comp:compl2                                                                                               ;              ;
+;       |two_s_complement:compl1|                 ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|DDS:inst8|two_s_complement:compl1                                                                                                 ;              ;
+;    |FrequencyDivider:frq1|                      ; 13 (13)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|FrequencyDivider:frq1                                                                                                             ;              ;
+;    |FrequencyDivider:frq2|                      ; 13 (13)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|FrequencyDivider:frq2                                                                                                             ;              ;
+;    |MUX8:inst9|                                 ; 17 (17)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|MUX8:inst9                                                                                                                        ;              ;
+;    |MUX:inst4|                                  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|MUX:inst4                                                                                                                         ;              ;
+;    |MessageProcess:inst6|                       ; 33 (1)            ; 24 (1)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|MessageProcess:inst6                                                                                                              ;              ;
+;       |ShiftRegister:MSG_REG|                   ; 10 (10)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|MessageProcess:inst6|ShiftRegister:MSG_REG                                                                                        ;              ;
+;       |UpCounter:SineCounter|                   ; 8 (8)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|MessageProcess:inst6|UpCounter:SineCounter                                                                                        ;              ;
+;       |UpCounter:SineMaker|                     ; 14 (14)           ; 10 (10)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|MessageProcess:inst6|UpCounter:SineMaker                                                                                          ;              ;
+;    |dac_pwm:inst7|                              ; 16 (16)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|dac_pwm:inst7                                                                                                                     ;              ;
+;    |fifo1:inst|                                 ; 16 (0)            ; 11 (0)       ; 40          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|fifo1:inst                                                                                                                        ;              ;
+;       |scfifo:scfifo_component|                 ; 16 (0)            ; 11 (0)       ; 40          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|fifo1:inst|scfifo:scfifo_component                                                                                                ;              ;
+;          |scfifo_s931:auto_generated|           ; 16 (0)            ; 11 (0)       ; 40          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated                                                                     ;              ;
+;             |a_dpfifo_3g31:dpfifo|              ; 16 (2)            ; 11 (0)       ; 40          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo                                                ;              ;
+;                |a_fefifo_m4f:fifo_state|        ; 8 (5)             ; 5 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|a_fefifo_m4f:fifo_state                        ;              ;
+;                   |cntr_oj7:count_usedw|        ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|a_fefifo_m4f:fifo_state|cntr_oj7:count_usedw   ;              ;
+;                |cntr_cjb:rd_ptr_count|          ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|cntr_cjb:rd_ptr_count                          ;              ;
+;                |cntr_cjb:wr_ptr|                ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|cntr_cjb:wr_ptr                                ;              ;
+;                |dpram_ot01:FIFOram|             ; 0 (0)             ; 0 (0)        ; 40          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|dpram_ot01:FIFOram                             ;              ;
+;                   |altsyncram_orj1:altsyncram2| ; 0 (0)             ; 0 (0)        ; 40          ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|dpram_ot01:FIFOram|altsyncram_orj1:altsyncram2 ;              ;
+;    |one_pulser:inst11|                          ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|one_pulser:inst11                                                                                                                 ;              ;
+;    |one_pulser:inst1|                           ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DigitalModulation|one_pulser:inst1                                                                                                                  ;              ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                 ;
++----------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                                                         ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++----------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|dpram_ot01:FIFOram|altsyncram_orj1:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 5            ; 8            ; 5            ; 40   ; None ;
++----------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                        ;
++--------+--------------+---------+--------------+--------------+-------------------------------+----------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance               ; IP Include File                              ;
++--------+--------------+---------+--------------+--------------+-------------------------------+----------------------------------------------+
+; Altera ; FIFO         ; 12.1    ; N/A          ; N/A          ; |DigitalModulation|fifo1:inst ; C:/Users/DLD lab 2/Desktop/dld_lab_4/fifo1.v ;
++--------+--------------+---------+--------------+--------------+-------------------------------+----------------------------------------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------+
+; State Machine - |DigitalModulation|DDS:inst8|phase_accumulator:PA|ps ;
++------+------+------+------+------------------------------------------+
+; Name ; ps.D ; ps.C ; ps.B ; ps.A                                     ;
++------+------+------+------+------------------------------------------+
+; ps.A ; 0    ; 0    ; 0    ; 0                                        ;
+; ps.B ; 0    ; 0    ; 1    ; 1                                        ;
+; ps.C ; 0    ; 1    ; 0    ; 1                                        ;
+; ps.D ; 1    ; 0    ; 0    ; 1                                        ;
++------+------+------+------+------------------------------------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------+
+; State Machine - |DigitalModulation|one_pulser:inst1|CS ;
++------+------+------+-----------------------------------+
+; Name ; CS.A ; CS.C ; CS.B                              ;
++------+------+------+-----------------------------------+
+; CS.A ; 0    ; 0    ; 0                                 ;
+; CS.B ; 1    ; 0    ; 1                                 ;
+; CS.C ; 1    ; 1    ; 0                                 ;
++------+------+------+-----------------------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------+
+; State Machine - |DigitalModulation|one_pulser:inst11|CS ;
++------+------+------+------------------------------------+
+; Name ; CS.A ; CS.C ; CS.B                               ;
++------+------+------+------------------------------------+
+; CS.A ; 0    ; 0    ; 0                                  ;
+; CS.B ; 1    ; 0    ; 1                                  ;
+; CS.C ; 1    ; 1    ; 0                                  ;
++------+------+------+------------------------------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; DDS:inst8|phase_accumulator:PA|ps~4   ; Lost fanout        ;
+; DDS:inst8|phase_accumulator:PA|ps~5   ; Lost fanout        ;
+; one_pulser:inst1|CS.C                 ; Lost fanout        ;
+; one_pulser:inst11|CS.C                ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 77    ;
+; Number of registers using Synchronous Clear  ; 10    ;
+; Number of registers using Synchronous Load   ; 18    ;
+; Number of registers using Asynchronous Clear ; 66    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 21    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DigitalModulation|MessageProcess:inst6|UpCounter:SineCounter|cnt[0]      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DigitalModulation|MessageProcess:inst6|ShiftRegister:MSG_REG|register[7] ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DigitalModulation|MessageProcess:inst6|ShiftRegister:MSG_REG|register[4] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DigitalModulation|MUX8:inst9|OUT[5]                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|dpram_ot01:FIFOram|altsyncram_orj1:altsyncram2 ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                         ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                          ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MessageProcess:inst6 ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; IDLE           ; 0     ; Signed Integer                           ;
+; SEND_MSG       ; 1     ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MessageProcess:inst6|UpCounter:SineMaker ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; N              ; 1024  ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: MessageProcess:inst6|UpCounter:SineCounter ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; N              ; 10    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: fifo1:inst|scfifo:scfifo_component ;
++-------------------------+-------------+-----------------------------------------+
+; Parameter Name          ; Value       ; Type                                    ;
++-------------------------+-------------+-----------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                          ;
+; lpm_width               ; 5           ; Signed Integer                          ;
+; LPM_NUMWORDS            ; 8           ; Signed Integer                          ;
+; LPM_WIDTHU              ; 3           ; Signed Integer                          ;
+; LPM_SHOWAHEAD           ; OFF         ; Untyped                                 ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                 ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                 ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                 ;
+; ADD_RAM_OUTPUT_REGISTER ; OFF         ; Untyped                                 ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                 ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                 ;
+; USE_EAB                 ; ON          ; Untyped                                 ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                 ;
+; DEVICE_FAMILY           ; Cyclone II  ; Untyped                                 ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                 ;
+; CBXI_PARAMETER          ; scfifo_s931 ; Untyped                                 ;
++-------------------------+-------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: one_pulser:inst11 ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; A              ; 00    ; Unsigned Binary                       ;
+; B              ; 01    ; Unsigned Binary                       ;
+; C              ; 10    ; Unsigned Binary                       ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: one_pulser:inst1 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; A              ; 00    ; Unsigned Binary                      ;
+; B              ; 01    ; Unsigned Binary                      ;
+; C              ; 10    ; Unsigned Binary                      ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DDS:inst8 ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; ADDR_WIDTH     ; 6     ; Signed Integer                ;
+; MAG_WIDTH      ; 8     ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DDS:inst8|phase_accumulator:PA ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; A              ; 00    ; Unsigned Binary                                    ;
+; B              ; 01    ; Unsigned Binary                                    ;
+; C              ; 10    ; Unsigned Binary                                    ;
+; D              ; 11    ; Unsigned Binary                                    ;
++----------------+-------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DDS:inst8|phase_accumulator:PA|up_counter:UC1 ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; WIDTH          ; 6     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DDS:inst8|two_s_complement:compl1 ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 6     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DDS:inst8|two_one_mux:mux1 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; WIDTH          ; 6     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DDS:inst8|ROM:sine_ROM ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; MAG_WIDTH      ; 8     ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DDS:inst8|two_one_mux:mux2 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; scfifo Parameter Settings by Entity Instance                    ;
++----------------------------+------------------------------------+
+; Name                       ; Value                              ;
++----------------------------+------------------------------------+
+; Number of entity instances ; 1                                  ;
+; Entity Instance            ; fifo1:inst|scfifo:scfifo_component ;
+;     -- FIFO Type           ; Single Clock                       ;
+;     -- lpm_width           ; 5                                  ;
+;     -- LPM_NUMWORDS        ; 8                                  ;
+;     -- LPM_SHOWAHEAD       ; OFF                                ;
+;     -- USE_EAB             ; ON                                 ;
++----------------------------+------------------------------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "DDS:inst8|two_one_mux:mux2" ;
++------+-------+----------+------------------------------+
+; Port ; Type  ; Severity ; Details                      ;
++------+-------+----------+------------------------------+
+; b    ; Input ; Info     ; Stuck at VCC                 ;
++------+-------+----------+------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MessageProcess:inst6|UpCounter:SineCounter"                                           ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; cntOUT ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MessageProcess:inst6|UpCounter:SineMaker"                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; cntOUT ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MessageProcess:inst6|ShiftRegister:MSG_REG"                                                      ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; parallelIN[8]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; parallelIN[7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; parallelIN[6]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; parallelIN[5]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; parallelOUT[7..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
+    Info: Processing started: Fri Nov 29 11:27:26 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DigitalModulation -c DigitalModulation
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file one_pulser.v
+    Info (12023): Found entity 1: one_pulser
+Info (12021): Found 1 design units, including 1 entities, in source file upcounter.v
+    Info (12023): Found entity 1: UpCounter
+Info (12021): Found 1 design units, including 1 entities, in source file up_counter.v
+    Info (12023): Found entity 1: up_counter
+Info (12021): Found 1 design units, including 1 entities, in source file two_s_complement.v
+    Info (12023): Found entity 1: two_s_complement
+Info (12021): Found 1 design units, including 1 entities, in source file two_one_mux.v
+    Info (12023): Found entity 1: two_one_mux
+Info (12021): Found 1 design units, including 1 entities, in source file sign_to_two_s_comp.v
+    Info (12023): Found entity 1: sign_to_two_s_comp
+Info (12021): Found 1 design units, including 1 entities, in source file shiftregister.v
+    Info (12023): Found entity 1: ShiftRegister
+Info (12021): Found 1 design units, including 1 entities, in source file rom.v
+    Info (12023): Found entity 1: ROM
+Info (12021): Found 1 design units, including 1 entities, in source file phase_accumulator.v
+    Info (12023): Found entity 1: phase_accumulator
+Info (12021): Found 1 design units, including 1 entities, in source file mux8.v
+    Info (12023): Found entity 1: MUX8
+Warning (12090): Entity "MUX" obtained from "MUX.v" instead of from Quartus II megafunction library
+Info (12021): Found 1 design units, including 1 entities, in source file mux.v
+    Info (12023): Found entity 1: MUX
+Info (12021): Found 1 design units, including 1 entities, in source file messageprocess.v
+    Info (12023): Found entity 1: MessageProcess
+Info (12021): Found 1 design units, including 1 entities, in source file frequencydivider.v
+    Info (12023): Found entity 1: FrequencyDivider
+Info (12021): Found 1 design units, including 1 entities, in source file freqdivhl.v
+    Info (12023): Found entity 1: FreqDivHL
+Info (12021): Found 1 design units, including 1 entities, in source file digitalmodulation.bdf
+    Info (12023): Found entity 1: DigitalModulation
+Info (12021): Found 1 design units, including 1 entities, in source file dds.v
+    Info (12023): Found entity 1: DDS
+Info (12021): Found 1 design units, including 1 entities, in source file dac_pwm.v
+    Info (12023): Found entity 1: dac_pwm
+Info (12021): Found 1 design units, including 1 entities, in source file fifo.v
+    Info (12023): Found entity 1: fifo
+Info (12021): Found 1 design units, including 1 entities, in source file fifo0.v
+    Info (12023): Found entity 1: fifo0
+Info (12021): Found 1 design units, including 1 entities, in source file fifo1.v
+    Info (12023): Found entity 1: fifo1
+Warning (10222): Verilog HDL Parameter Declaration warning at UpCounter.v(3): Parameter Declaration in module "UpCounter" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List
+Info (12127): Elaborating entity "DigitalModulation" for the top level hierarchy
+Info (12128): Elaborating entity "dac_pwm" for hierarchy "dac_pwm:inst7"
+Info (12128): Elaborating entity "MUX8" for hierarchy "MUX8:inst9"
+Info (12128): Elaborating entity "MessageProcess" for hierarchy "MessageProcess:inst6"
+Warning (10230): Verilog HDL assignment warning at MessageProcess.v(30): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at MessageProcess.v(35): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at MessageProcess.v(37): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at MessageProcess.v(38): truncated value with size 32 to match size of target (1)
+Info (12128): Elaborating entity "ShiftRegister" for hierarchy "MessageProcess:inst6|ShiftRegister:MSG_REG"
+Info (12128): Elaborating entity "UpCounter" for hierarchy "MessageProcess:inst6|UpCounter:SineMaker"
+Warning (10230): Verilog HDL assignment warning at UpCounter.v(16): truncated value with size 32 to match size of target (10)
+Info (12128): Elaborating entity "UpCounter" for hierarchy "MessageProcess:inst6|UpCounter:SineCounter"
+Warning (10230): Verilog HDL assignment warning at UpCounter.v(16): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "FrequencyDivider" for hierarchy "FrequencyDivider:frq1"
+Warning (10230): Verilog HDL assignment warning at FrequencyDivider.v(20): truncated value with size 32 to match size of target (9)
+Info (12128): Elaborating entity "FreqDivHL" for hierarchy "FreqDivHL:inst5"
+Info (12128): Elaborating entity "fifo1" for hierarchy "fifo1:inst"
+Info (12128): Elaborating entity "scfifo" for hierarchy "fifo1:inst|scfifo:scfifo_component"
+Info (12130): Elaborated megafunction instantiation "fifo1:inst|scfifo:scfifo_component"
+Info (12133): Instantiated megafunction "fifo1:inst|scfifo:scfifo_component" with the following parameter:
+    Info (12134): Parameter "add_ram_output_register" = "OFF"
+    Info (12134): Parameter "intended_device_family" = "Cyclone II"
+    Info (12134): Parameter "lpm_numwords" = "8"
+    Info (12134): Parameter "lpm_showahead" = "OFF"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "5"
+    Info (12134): Parameter "lpm_widthu" = "3"
+    Info (12134): Parameter "overflow_checking" = "ON"
+    Info (12134): Parameter "underflow_checking" = "ON"
+    Info (12134): Parameter "use_eab" = "ON"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_s931.tdf
+    Info (12023): Found entity 1: scfifo_s931
+Info (12128): Elaborating entity "scfifo_s931" for hierarchy "fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_3g31.tdf
+    Info (12023): Found entity 1: a_dpfifo_3g31
+Info (12128): Elaborating entity "a_dpfifo_3g31" for hierarchy "fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo"
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_fefifo_m4f.tdf
+    Info (12023): Found entity 1: a_fefifo_m4f
+Info (12128): Elaborating entity "a_fefifo_m4f" for hierarchy "fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|a_fefifo_m4f:fifo_state"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_oj7.tdf
+    Info (12023): Found entity 1: cntr_oj7
+Info (12128): Elaborating entity "cntr_oj7" for hierarchy "fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|a_fefifo_m4f:fifo_state|cntr_oj7:count_usedw"
+Info (12021): Found 1 design units, including 1 entities, in source file db/dpram_ot01.tdf
+    Info (12023): Found entity 1: dpram_ot01
+Info (12128): Elaborating entity "dpram_ot01" for hierarchy "fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|dpram_ot01:FIFOram"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_orj1.tdf
+    Info (12023): Found entity 1: altsyncram_orj1
+Info (12128): Elaborating entity "altsyncram_orj1" for hierarchy "fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|dpram_ot01:FIFOram|altsyncram_orj1:altsyncram2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_cjb.tdf
+    Info (12023): Found entity 1: cntr_cjb
+Info (12128): Elaborating entity "cntr_cjb" for hierarchy "fifo1:inst|scfifo:scfifo_component|scfifo_s931:auto_generated|a_dpfifo_3g31:dpfifo|cntr_cjb:rd_ptr_count"
+Info (12128): Elaborating entity "one_pulser" for hierarchy "one_pulser:inst11"
+Info (12128): Elaborating entity "DDS" for hierarchy "DDS:inst8"
+Info (12128): Elaborating entity "phase_accumulator" for hierarchy "DDS:inst8|phase_accumulator:PA"
+Info (12128): Elaborating entity "up_counter" for hierarchy "DDS:inst8|phase_accumulator:PA|up_counter:UC1"
+Warning (10230): Verilog HDL assignment warning at up_counter.v(14): truncated value with size 32 to match size of target (6)
+Warning (10230): Verilog HDL assignment warning at up_counter.v(16): truncated value with size 32 to match size of target (6)
+Info (12128): Elaborating entity "two_s_complement" for hierarchy "DDS:inst8|two_s_complement:compl1"
+Warning (10230): Verilog HDL assignment warning at two_s_complement.v(4): truncated value with size 32 to match size of target (6)
+Info (12128): Elaborating entity "two_one_mux" for hierarchy "DDS:inst8|two_one_mux:mux1"
+Info (12128): Elaborating entity "ROM" for hierarchy "DDS:inst8|ROM:sine_ROM"
+Warning (10858): Verilog HDL warning at ROM.v(4): object LUT used but never assigned
+Info (12128): Elaborating entity "two_one_mux" for hierarchy "DDS:inst8|two_one_mux:mux2"
+Info (12128): Elaborating entity "sign_to_two_s_comp" for hierarchy "DDS:inst8|sign_to_two_s_comp:compl2"
+Warning (10230): Verilog HDL assignment warning at sign_to_two_s_comp.v(7): truncated value with size 32 to match size of target (8)
+Info (12128): Elaborating entity "MUX" for hierarchy "MUX:inst4"
+Warning (19016): Clock multiplexers are found and protected
+    Warning (19017): Found clock multiplexer MUX:inst4|OUT
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "DDS:inst8|ROM:sine_ROM|LUT" is uninferred due to asynchronous read logic
+Warning (113028): 192 out of 256 addresses are uninitialized. The Quartus II software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported.
+    Warning (113027): Addresses ranging from 64 to 255 are not initialized
+Critical Warning (127004): Memory depth (64) in the design file differs from memory depth (256) in the Memory Initialization File "C:/Users/DLD lab 2/Desktop/dld_lab_4/sine.mif" -- truncated remaining initial content value to fit RAM
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/DLD lab 2/Desktop/dld_lab_4/output_files/DigitalModulation.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 196 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 14 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 173 logic cells
+    Info (21064): Implemented 5 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 452 megabytes
+    Info: Processing ended: Fri Nov 29 11:27:29 2024
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/DLD lab 2/Desktop/dld_lab_4/output_files/DigitalModulation.map.smsg.
+
+

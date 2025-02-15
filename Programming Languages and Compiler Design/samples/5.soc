@@ -1,0 +1,13 @@
+main() {
+    int arr1[3] = [1, 2, 3];
+    int arr2[3] = [10, 20, 30];
+    int temp;
+
+    for (num1 in arr1) {
+        for (num2 in arr2) {
+            temp = num1 * num2;
+            print(temp);
+        }
+    }
+    print("");
+}

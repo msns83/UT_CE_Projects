@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 29 11:27:29 2024
+Quartus II 64-Bit Version : 12.1 Build 177 11/07/2012 SJ Web Edition
+Revision Name : DigitalModulation
+Top-level Entity Name : DigitalModulation
+Family : Cyclone II
+Total logic elements : 173
+    Total combinational functions : 171
+    Dedicated logic registers : 77
+Total registers : 77
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 40
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
