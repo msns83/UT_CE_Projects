@@ -1,0 +1,162 @@
+cpu0: starting 0
+sb: size 1000 nblocks 941 ninodes 200 nlog 30 logstart 2 inodestart 32 bmap start 58
+init: starting sh
+
+Majid Sadeghinejad
+Parsa Ahmadi
+Aria Azem
+
+majid-sadeghinejad|parsa-ahmadi|aria-azem $ ls
+shell changed schedule class
+pid: 3 from class 3 to class 2 
+.              1 1 512
+..             1 1 512
+README         2 2 2286
+cat            2 3 15732
+echo           2 4 14636
+forktest       2 5 9224
+grep           2 6 18668
+init           2 7 15308
+kill           2 8 14688
+ln             2 9 14592
+ls             2 10 17212
+mkdir          2 11 14716
+rm             2 12 14696
+sh             2 13 32380
+stressfs       2 14 15468
+usertests      2 15 63612
+wc             2 16 16112
+zombie         2 17 14268
+brace_check    2 18 15736
+schtest        2 19 17772
+console        3 20 0
+majid-sadeghinejad|parsa-ahmadi|aria-azem $ schtest
+shell changed schedule class
+pid: 4 from class 3 to class 2 
+User changed schedule class
+pid: 4 from class 2 to class 1 
+Main process -> real-time, deadline: 1, pid: 4 
+New Noraml process (going to be Critical) -> pid: 5
+New Noraml process (going to be Critical) -> pid: 6
+New Noraml process (going to be Critical) -> pid: 7
+New real-time process -> pid: 8, deadline: 100
+New real-time process -> pid: 9, deadline: 3
+New real-time process -> pid: 10, deadline: 20
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       RUNNING  RT       1       0       1       980     39
+5       RUNNBL   NR       3       25      0       995     0
+6       RUNNBL   NR       3       20      0       1000    0
+7       RUNNBL   NR       3       16      0       1005    0
+8       RUNNBL   RT       1       0       1110    1010    0
+9       RUNNBL   RT       1       0       1017    1014    0
+10      RUNNBL   RT       1       0       1040    1020    0
+REAL-TIME pid 9  iter 0
+REAL-TIME pid 9  iter 1
+REAL-TIME pid 9  iter 2
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       SLEEP    RT       1       0       1       980     40
+5       RUNNBL   NR       3       641     0       995     0
+6       RUNNBL   NR       3       636     0       1000    0
+7       RUNNBL   NR       3       632     0       1005    0
+8       RUNNBL   RT       1       0       1110    1010    0
+9       RUNNING  RT       1       0       1017    1014    615
+10      RUNNBL   RT       1       0       1040    1020    0
+REAL-TIME pid 10  iter 0
+pid: 5 from class 3 to class 2 (aging !)
+pid: 6 from class 3 to class 2 (aging !)
+pid: 7 from class 3 to class 2 (aging !)
+REAL-TIME pid 10  iter 1
+REAL-TIME pid 10  iter 2
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       SLEEP    RT       1       0       1       980     40
+5       RUNNBL   NR       2       800     0       995     0
+6       RUNNBL   NR       2       800     0       1000    0
+7       RUNNBL   NR       2       800     0       1005    0
+8       RUNNBL   RT       1       0       1110    1010    0
+10      RUNNING  RT       1       0       1040    1020    608
+REAL-TIME pid 8  iter 0
+REAL-TIME pid 8  iter 1
+REAL-TIME pid 8  iter 2
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       SLEEP    RT       1       0       1       980     40
+5       RUNNBL   NR       2       800     0       995     0
+6       RUNNBL   NR       2       800     0       1000    0
+7       RUNNBL   NR       2       800     0       1005    0
+8       RUNNING  RT       1       0       1110    1010    606
+NORMAL pid 5  iter 0
+NORMAL pid 6  iter 0
+NORMAL pid 7  iter 0
+NORMAL pid 5  iter 1
+NORMAL pid 6  iter 1
+NORMAL pid 7  iter 1
+NORMAL pid 5  iter 2
+NORMAL pid 6  iter 2
+NORMAL pid 7  iter 2
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       SLEEP    RT       1       0       1       980     40
+5       RUNNING  NR       2       800     0       995     37
+6       RUNNBL   NR       2       800     0       1000    36
+7       RUNNBL   NR       2       800     0       1005    36
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       SLEEP    RT       1       0       1       980     40
+6       RUNNING  NR       2       800     0       1000    36
+7       RUNNBL   NR       2       800     0       1005    36
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       SLEEP    RT       1       0       1       980     40
+7       RUNNING  NR       2       800     0       1005    38
+New Noraml process -> pid: 11
+New Noraml process -> pid: 12
+New Noraml process -> pid: 13
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       RUNNING  RT       1       0       1       980     51
+11      RUNNBL   NR       3       7       0       2971    0
+12      RUNNBL   NR       3       4       0       2974    0
+13      RUNNBL   NR       3       1       0       2977    0
+NORMAL pid 11  iter 0
+NORMAL pid 11  iter 1
+NORMAL pid 11  iter 2
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       SLEEP    RT       1       0       1       980     52
+11      RUNNING  NR       3       8       0       2971    38
+12      RUNNBL   NR       3       43      0       2974    0
+13      RUNNBL   NR       3       40      0       2977    0
+NORMAL pid 12  iter 0
+NORMAL pid 12  iter 1
+NORMAL pid 12  iter 2
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       SLEEP    RT       1       0       1       980     53
+12      RUNNING  NR       3       45      0       2974    38
+13      RUNNBL   NR       3       80      0       2977    0
+NORMAL pid 13  iter 0
+NORMAL pid 13  iter 1
+NORMAL pid 13  iter 2
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       SLEEP    RT       1       0       1       980     53
+13      RUNNING  NR       3       82      0       2977    38
+PID     STATE    TYPE   CLASS    WAIT     DL     ARR     CONS
+1       SLEEP    NR       2       0       0       0       10
+2       SLEEP    NR       3       2       0       11      12
+4       RUNNING  RT       1       0       1       980     54
+majid-sadeghinejad|parsa-ahmadi|aria-azem $ 

@@ -1,0 +1,4 @@
+Hello, this is a test file.
+This line is the same in both files.
+This line is different in file 2.
+This is the last line, which is the same. 
