@@ -1,0 +1,6 @@
+*.mp4
+venv
+.DS_Store
+__pycache__
+.venv
+database

@@ -1,0 +1,165 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Apr 14 13:28:09 2025
+# Process ID: 25392
+# Current directory: C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent27240 C:\Users\A.Z\Desktop\ALab\ca_lab\CA_LAB\CA_LAB.xpr
+# Log file: C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/vivado.log
+# Journal file: C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/A.Z/Desktop/ALab/verilog code/condition_check.v} {C:/Users/A.Z/Desktop/ALab/verilog code/control_unit.v}}
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd}
+set_property location {7 2253 -96} [get_bd_cells fetch_register_file_2]
+set_property location {5 1438 -228} [get_bd_cells fetch_register_file_3]
+set_property location {4 1200 -326} [get_bd_cells fetch_register_file_1]
+set_property location {5.5 1851 -250} [get_bd_cells fetch_register_file_3]
+set_property location {4.5 1460 -308} [get_bd_cells fetch_register_file_1]
+set_property location {3.5 1001 -321} [get_bd_cells fetch_register_file_0]
+set_property location {6.5 3055 -91} [get_bd_cells ila_1]
+set_property location {1 224 -240} [get_bd_cells IF_Stage]
+set_property location {1.5 499 -273} [get_bd_cells fetch_register_file_0]
+create_bd_cell -type module -reference condition_check condition_check_0
+save_bd_design
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference control_unit control_unit_0
+set_property location {3.5 910 312} [get_bd_cells control_unit_0]
+connect_bd_net [get_bd_pins control_unit_0/s] [get_bd_pins control_unit_0/mode]
+delete_bd_objs [get_bd_nets Net]
+set_property location {4 919 62} [get_bd_cells control_unit_0]
+delete_bd_objs [get_bd_cells condition_check_0]
+delete_bd_objs [get_bd_cells control_unit_0]
+update_compile_order -fileset sources_1
+add_files -norecurse {{C:/Users/A.Z/Desktop/ALab/verilog code/id_top_module.v}}
+update_compile_order -fileset sources_1
+save_bd_design
+create_bd_cell -type module -reference condition_check condition_check_0
+delete_bd_objs [get_bd_cells condition_check_0]
+add_files -norecurse {{C:/Users/A.Z/Desktop/ALab/verilog code/register_file_id.v}}
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference id_top_module id_top_module_0
+set_property location {3 759 -46} [get_bd_cells id_top_module_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:dist_mem_gen:8.0 dist_mem_gen_0
+endgroup
+set_property -dict [list CONFIG.depth {8192} CONFIG.data_width {32} CONFIG.memory_type {rom}] [get_bd_cells dist_mem_gen_0]
+set_property location {3 817 -118} [get_bd_cells id_top_module_0]
+set_property location {2 376 -208} [get_bd_cells fetch_register_file_0]
+set_property location {4 1470 -277} [get_bd_cells fetch_register_file_1]
+delete_bd_objs [get_bd_nets fetch_register_file_0_instruction_reg] [get_bd_nets fetch_register_file_1_instruction_reg] [get_bd_cells fetch_register_file_1]
+set_property location {3.5 892 -201} [get_bd_cells id_top_module_0]
+connect_bd_net [get_bd_pins fetch_register_file_0/instruction_reg] [get_bd_pins id_top_module_0/w_dest]
+delete_bd_objs [get_bd_nets fetch_register_file_0_instruction_reg]
+connect_bd_net [get_bd_pins fetch_register_file_0/instruction_reg] [get_bd_pins id_top_module_0/inst]
+connect_bd_net [get_bd_ports clk] [get_bd_pins id_top_module_0/clk]
+delete_bd_objs [get_bd_nets rst_1] [get_bd_cells debouncer_0]
+update_compile_order -fileset sources_1
+connect_bd_net [get_bd_ports rst] [get_bd_pins fetch_register_file_0/rst]
+connect_bd_net [get_bd_ports rst] [get_bd_pins id_top_module_0/rst]
+set_property location {2.5 785 -71} [get_bd_cells id_top_module_0]
+delete_bd_objs [get_bd_nets fetch_register_file_1_updated_pc_reg] [get_bd_nets fetch_register_file_3_updated_pc_reg] [get_bd_nets fetch_register_file_3_instruction_reg] [get_bd_cells fetch_register_file_3]
+delete_bd_objs [get_bd_nets fetch_register_file_2_updated_pc_reg] [get_bd_nets fetch_register_file_2_instruction_reg] [get_bd_cells fetch_register_file_2]
+copy_bd_objs IF_Stage  [get_bd_cells {dist_mem_gen_0}]
+set_property location {3.5 793 269} [get_bd_cells IF_Stage/dist_mem_gen_0]
+set_property -dict [list CONFIG.coefficient_file {C:/Users/A.Z/Desktop/ALab/ca_lab/files/so1_files/output.coe}] [get_bd_cells IF_Stage/dist_mem_gen_0]
+set_property location {3 735 273} [get_bd_cells IF_Stage/dist_mem_gen_0]
+delete_bd_objs [get_bd_nets IF_Stage/xlslice_0_Dout]
+connect_bd_net [get_bd_pins IF_Stage/xlslice_0/Dout] [get_bd_pins IF_Stage/dist_mem_gen_0/a]
+delete_bd_objs [get_bd_nets IF_Stage/blk_mem_gen_0_douta]
+connect_bd_net [get_bd_pins IF_Stage/douta] [get_bd_pins IF_Stage/dist_mem_gen_0/spo]
+delete_bd_objs [get_bd_cells IF_Stage/blk_mem_gen_0]
+delete_bd_objs [get_bd_cells dist_mem_gen_0]
+delete_bd_objs [get_bd_nets fetch_register_file_0_updated_pc_reg] [get_bd_cells ila_1]
+set_property location {3 879 -107} [get_bd_cells id_top_module_0]
+create_bd_cell -type module -reference id_register_file id_register_file_0
+set_property location {4.5 1322 -185} [get_bd_cells id_register_file_0]
+set_property location {3.5 885 -138} [get_bd_cells id_top_module_0]
+connect_bd_net [get_bd_ports clk] [get_bd_pins id_register_file_0/clk]
+connect_bd_net [get_bd_ports rst] [get_bd_pins id_register_file_0/rst]
+connect_bd_net [get_bd_pins id_top_module_0/imm] [get_bd_pins id_register_file_0/imm]
+connect_bd_net [get_bd_pins id_top_module_0/shift_operand] [get_bd_pins id_register_file_0/shift_operand]
+connect_bd_net [get_bd_pins id_top_module_0/cuoo] [get_bd_pins id_register_file_0/control_unit_out]
+connect_bd_net [get_bd_pins id_top_module_0/signed_imm_24] [get_bd_pins id_register_file_0/signed_imm_24]
+connect_bd_net [get_bd_pins id_top_module_0/dest] [get_bd_pins id_register_file_0/dest]
+connect_bd_net [get_bd_pins id_top_module_0/val_rm] [get_bd_pins id_register_file_0/val_rm]
+connect_bd_net [get_bd_pins id_top_module_0/val_rn] [get_bd_pins id_register_file_0/val_rn]
+connect_bd_net [get_bd_pins fetch_register_file_0/updated_pc_reg] [get_bd_pins id_register_file_0/pc]
+set_property location {3 900 51} [get_bd_cells id_top_module_0]
+connect_bd_net [get_bd_pins id_top_module_0/z] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins id_top_module_0/c] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins id_top_module_0/n] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins id_top_module_0/v] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins id_top_module_0/hazard] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins id_top_module_0/w_en] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins id_top_module_0/w_dest] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins id_top_module_0/w_val] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins id_register_file_0/flush] [get_bd_pins xlconstant_0/dout]
+connect_bd_net [get_bd_pins id_register_file_0/status_reg] [get_bd_pins xlconstant_0/dout]
+create_bd_port -dir O f
+delete_bd_objs [get_bd_ports f]
+startgroup
+make_bd_pins_external  [get_bd_cells id_register_file_0]
+make_bd_intf_pins_external  [get_bd_cells id_register_file_0]
+endgroup
+make_wrapper -files [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -top
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property -dict [list CONFIG.CONST_WIDTH {32} CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_1]
+delete_bd_objs [get_bd_nets xlconstant_0_dout]
+undo
+disconnect_bd_net /xlconstant_0_dout [get_bd_pins id_top_module_0/w_val]
+disconnect_bd_net /xlconstant_0_dout [get_bd_pins id_top_module_0/w_dest]
+connect_bd_net [get_bd_pins xlconstant_1/dout] [get_bd_pins id_top_module_0/w_val]
+copy_bd_objs /  [get_bd_cells {xlconstant_1}]
+set_property -dict [list CONFIG.CONST_WIDTH {4}] [get_bd_cells xlconstant_2]
+connect_bd_net [get_bd_pins xlconstant_2/dout] [get_bd_pins id_top_module_0/w_dest]
+make_wrapper -files [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -top
+make_wrapper -files [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -top
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/A.Z/Desktop/ALab/ca_lab/modules/fetch_inst/testbench1.v
+open_bd_design {C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd}
+generate_target Simulation [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -directory C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files -ipstatic_source_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/modelsim} {questa=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/questa} {riviera=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/riviera} {activehdl=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_bd_design {C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd}
+open_bd_design {C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd}
+open_bd_design {C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd}
+update_module_reference CA_LAB1_id_top_module_0_0
+make_wrapper -files [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -top
+generate_target Simulation [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -directory C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files -ipstatic_source_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/modelsim} {questa=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/questa} {riviera=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/riviera} {activehdl=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+update_module_reference CA_LAB1_id_top_module_0_0
+update_module_reference CA_LAB1_id_top_module_0_0
+generate_target Simulation [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -directory C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files -ipstatic_source_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/modelsim} {questa=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/questa} {riviera=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/riviera} {activehdl=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+make_wrapper -files [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -top
+generate_target all [get_files  C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd]
+catch { config_ip_cache -export [get_ips -all CA_LAB1_dist_mem_gen_0_1] }
+export_ip_user_files -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd]
+launch_runs -jobs 4 {CA_LAB1_dist_mem_gen_0_1_synth_1 CA_LAB1_id_top_module_0_0_synth_1 CA_LAB1_id_register_file_0_0_synth_1}
+export_simulation -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -directory C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files -ipstatic_source_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/modelsim} {questa=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/questa} {riviera=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/riviera} {activehdl=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+update_module_reference CA_LAB1_id_top_module_0_0
+generate_target Simulation [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -directory C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files -ipstatic_source_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/modelsim} {questa=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/questa} {riviera=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/riviera} {activehdl=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+generate_target all [get_files  C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd]
+export_ip_user_files -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd]
+launch_runs -jobs 4 CA_LAB1_id_top_module_0_0_synth_1
+export_simulation -of_objects [get_files C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.srcs/sources_1/bd/CA_LAB1/CA_LAB1.bd] -directory C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files -ipstatic_source_dir C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/modelsim} {questa=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/questa} {riviera=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/riviera} {activehdl=C:/Users/A.Z/Desktop/ALab/ca_lab/CA_LAB/CA_LAB.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation

@@ -1,0 +1,153 @@
+
+Group A Matches:
+Qatar vs Ecuador: Ecuador wins (random)
+Qatar vs Senegal: Qatar wins (random)
+Qatar vs Netherlands: Netherlands wins (random)
+Ecuador vs Senegal: Ecuador wins (random)
+Ecuador vs Netherlands: Ecuador wins (random)
+Senegal vs Netherlands: Senegal wins (random)
+Standings for Group A:
+1. Ecuador - 9 points
+2. Qatar - 3 points
+3. Senegal - 3 points
+4. Netherlands - 3 points
+
+Group B Matches:
+England vs Iran: England wins (random)
+England vs USA: USA wins (random)
+England vs Wales: Wales wins (random)
+Iran vs USA: USA wins (random)
+Iran vs Wales: Wales wins (random)
+USA vs Wales: USA wins (random)
+Standings for Group B:
+1. USA - 9 points
+2. Wales - 6 points
+3. England - 3 points
+4. Iran - 0 points
+
+Group C Matches:
+Argentina vs Mexico: Argentina wins
+Poland vs Argentina: Argentina wins
+Poland vs Mexico: Poland wins
+Argentina vs Poland: Argentina wins
+Argentina vs Mexico: Argentina wins
+Argentina vs Mexico: Argentina wins
+Argentina vs Saudi Arabia: Saudi Arabia wins (random)
+Saudi Arabia vs Mexico: Saudi Arabia wins (random)
+Saudi Arabia vs Poland: Saudi Arabia wins (random)
+Standings for Group C:
+1. Argentina - 15 points
+2. Saudi Arabia - 9 points
+3. Poland - 3 points
+4. Mexico - 0 points
+
+Group D Matches:
+France vs Denmark: France wins
+Denmark vs France: France wins
+France vs Australia: France wins
+Denmark vs Australia: Denmark wins
+Denmark vs France: France wins
+France vs Australia: Australia wins (random)
+France vs Denmark: France wins (random)
+France vs Tunisia: Tunisia wins (random)
+Australia vs Tunisia: Australia wins (random)
+Denmark vs Tunisia: Denmark wins (random)
+Standings for Group D:
+1. France - 15 points
+2. Australia - 6 points
+3. Denmark - 6 points
+4. Tunisia - 3 points
+
+Group E Matches:
+Germany vs Spain: Germany wins
+Spain vs Germany: Germany wins
+Germany vs Spain: Germany wins
+Germany vs Costa Rica: Germany wins
+Germany vs Spain: Germany wins
+Spain vs Costa Rica: Costa Rica wins (random)
+Spain vs Germany: Spain wins (random)
+Spain vs Japan: Spain wins (random)
+Costa Rica vs Japan: Costa Rica wins (random)
+Germany vs Japan: Germany wins (random)
+Standings for Group E:
+1. Germany - 18 points
+2. Spain - 6 points
+3. Costa Rica - 6 points
+4. Japan - 0 points
+
+Group F Matches:
+Belgium vs Morocco: Belgium wins
+Belgium vs Canada: Belgium wins (random)
+Belgium vs Croatia: Croatia wins (random)
+Canada vs Morocco: Canada wins (random)
+Canada vs Croatia: Canada wins (random)
+Morocco vs Croatia: Croatia wins (random)
+Standings for Group F:
+1. Belgium - 6 points
+2. Canada - 6 points
+3. Croatia - 6 points
+4. Morocco - 0 points
+
+Group G Matches:
+Brazil vs Switzerland: Brazil wins
+Brazil vs Cameroon: Brazil wins
+Brazil vs Cameroon: Brazil wins
+Brazil vs Switzerland: Brazil wins
+Serbia vs Switzerland: Switzerland wins
+Serbia vs Brazil: Brazil wins
+Serbia vs Cameroon: Serbia wins (random)
+Switzerland vs Cameroon: Switzerland wins (random)
+Standings for Group G:
+1. Brazil - 15 points
+2. Switzerland - 6 points
+3. Serbia - 3 points
+4. Cameroon - 0 points
+
+Group H Matches:
+South Korea vs Uruguay: Uruguay wins
+South Korea vs Portugal: South Korea wins
+Uruguay vs South Korea: Uruguay wins
+Uruguay vs Ghana: Uruguay wins
+Portugal vs Ghana: Portugal wins
+Uruguay vs Portugal: Uruguay wins
+Portugal vs Ghana: Ghana wins (random)
+Ghana vs South Korea: South Korea wins (random)
+Uruguay vs South Korea: Uruguay wins (random)
+Standings for Group H:
+1. Uruguay - 15 points
+2. South Korea - 6 points
+3. Portugal - 3 points
+4. Ghana - 3 points
+
+Qualified Teams for Knockout Stage:
+Group A: ['Ecuador', 'Qatar']
+Group B: ['USA', 'Wales']
+Group C: ['Argentina', 'Saudi Arabia']
+Group D: ['France', 'Australia']
+Group E: ['Germany', 'Spain']
+Group F: ['Belgium', 'Canada']
+Group G: ['Brazil', 'Switzerland']
+Group H: ['Uruguay', 'South Korea']
+
+Knockout Stage Matches (Round of 16):
+Ecuador (1st Group A) vs Wales (2nd Group B): Ecuador wins
+Qatar (2nd Group A) vs USA (1st Group B): Qatar wins
+Argentina (1st Group C) vs Australia (2nd Group D): Australia wins
+Saudi Arabia (2nd Group C) vs France (1st Group D): France wins
+Germany (1st Group E) vs Canada (2nd Group F): Germany wins
+Spain (2nd Group E) vs Belgium (1st Group F): Spain wins
+Brazil (1st Group G) vs South Korea (2nd Group H): South Korea wins
+Switzerland (2nd Group G) vs Uruguay (1st Group H): Switzerland wins
+
+Quarter Final Matches:
+Ecuador vs Qatar: Qatar wins
+Australia vs France: Australia wins
+Germany vs Spain: Germany wins
+South Korea vs Switzerland: South Korea wins
+
+Semi Final Matches:
+Qatar vs Australia: Qatar wins
+Germany vs South Korea: South Korea wins
+
+Final Match:
+Qatar vs South Korea: Qatar wins

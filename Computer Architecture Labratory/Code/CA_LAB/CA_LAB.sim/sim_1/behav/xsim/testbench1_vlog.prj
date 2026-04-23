@@ -1,0 +1,41 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../modules/IF/fetch_instruction.v" \
+"../../../../../modules/IF/fetch_rf.v" \
+"../../../../../modules/ID/condition_check.v" \
+"../../../../../modules/ID/control_unit.v" \
+"../../../../../modules/ID/register_file_id.v" \
+"../../../../../modules/ID/id_top_module.v" \
+"../../../../../modules/ID/id_rf.v" \
+"../../../../../modules/EXE/ALU.v" \
+"../../../../../modules/EXE/status_register.v" \
+"../../../../../modules/EXE/val2generator.v" \
+"../../../../../modules/EXE/top_module.v" \
+"../../../../../modules/EXE/exe_rf.v" \
+"../../../../../modules/Hazard/hazard.v" \
+"../../../../../modules/MEM/mem_rf.v" \
+"../../../../../modules/WB/mux32b.v" \
+"../../../../../modules/Forward/forward.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_fetch_instruction_0_0/sim/CA_LAB1_fetch_instruction_0_0.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_xlslice_0_0/sim/CA_LAB1_xlslice_0_0.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_fetch_register_file_0_0/sim/CA_LAB1_fetch_register_file_0_0.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/sim/CA_LAB1.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_dist_mem_gen_0_1/sim/CA_LAB1_dist_mem_gen_0_1.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_id_top_module_0_0/sim/CA_LAB1_id_top_module_0_0.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_id_register_file_0_0/sim/CA_LAB1_id_register_file_0_0.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_top_ex_0_0/sim/CA_LAB1_top_ex_0_0.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_ex_register_file_0_0/sim/CA_LAB1_ex_register_file_0_0.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_data_hazard_unit_0_0/sim/CA_LAB1_data_hazard_unit_0_0.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_dist_mem_gen_0_0/sim/CA_LAB1_dist_mem_gen_0_0.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_mem_register_file_0_0/sim/CA_LAB1_mem_register_file_0_0.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_mux2to1_32bit_0_0/sim/CA_LAB1_mux2to1_32bit_0_0.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_xlslice_0_1/sim/CA_LAB1_xlslice_0_1.v" \
+"../../../../CA_LAB.ip_user_files/bd/CA_LAB1/ip/CA_LAB1_forward_0_0/sim/CA_LAB1_forward_0_0.v" \
+"../../../../CA_LAB.srcs/sources_1/bd/CA_LAB1/hdl/CA_LAB1_wrapper.v" \
+"../../../../../modules/testbench1.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
