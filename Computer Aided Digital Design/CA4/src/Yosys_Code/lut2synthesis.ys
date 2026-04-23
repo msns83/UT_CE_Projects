@@ -1,0 +1,26 @@
+# Yosys synthesis script for LUT2 mapping
+# add your verilog files here like this: 
+# read_verilog <verilog_file1.v>
+# read_verilog <verilog_file2.v>
+
+# CA1 design files
+read_verilog ../CA1_Code/combinational_circuit.v
+read_verilog ../CA1_Code/hash_generator_CN.v
+read_verilog ../CA1_Code/hash_generator_DP.v
+read_verilog ../CA1_Code/hash_generator.v
+read_verilog ../CA1_Code/import_rom.v
+read_verilog ../CA1_Code/left_shifter.v
+read_verilog ../CA1_Code/leftRotator.v
+read_verilog ../CA1_Code/message_reg.v
+read_verilog ../CA1_Code/random_generator_CN.v
+read_verilog ../CA1_Code/random_generator_DP.v
+read_verilog ../CA1_Code/random_generator.v
+read_verilog ../CA1_Code/RangeSpecifier.v
+read_verilog ../CA1_Code/single_reg.v
+read_verilog ../CA1_Code/top.v
+read_verilog ../CA1_Code/up_counter.v
+read_verilog ../CA1_Code/words_reg.v
+
+hierarchy -check -top top
+synth -lut 2
+write_verilog -norename -noattr -noexpr -nodec synthesized_top.v
