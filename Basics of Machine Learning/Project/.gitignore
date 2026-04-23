@@ -1,0 +1,15 @@
+*.tex
+*.aux
+*.xdv
+*.gz
+*.log
+*.fls
+*.fdb_latexmk
+*.lot
+*.lof
+*.out
+*.toc
+
+Data/
+
+.DS_Store

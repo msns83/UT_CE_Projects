@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"CA_LAB1": {
-			"proto_instances": {
-			}
-		}
-	}
-}
