@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoginForm snapshot 1`] = `
+<div>
+  <form
+    aria-label="login-form"
+    onSubmit={[Function]}
+  >
+    <label
+      htmlFor="email"
+    >
+      Email
+    </label>
+    <input
+      id="email"
+      name="email"
+      onChange={[Function]}
+      value=""
+    />
+    <label
+      htmlFor="password"
+    >
+      Password
+    </label>
+    <input
+      id="password"
+      name="password"
+      onChange={[Function]}
+      type="password"
+      value=""
+    />
+    <button
+      type="submit"
+    >
+      Log in
+    </button>
+  </form>
+</div>
+`;
