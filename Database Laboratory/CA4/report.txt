@@ -1,0 +1,25 @@
+Query Optimization Choices for DB Lab
+
+In this part of the assignment, I rewrote 8 of the original queries into Functions, Views, and Materialized Views. Here is the reason why I chose each specific type for these queries:
+
+1. Functions (Procedures)
+I decided to use Functions for queries that require dynamic inputs or changing conditions from the user. Since regular views cannot accept variables, functions were the only logical choice here.
+
+- GetPopularReleases: I need to find popular releases within a specific timeframe and set a limit for the top results. Since the start date, end date, and top limit can change every time we ask, I made it a function.
+- GetExpiringAccounts: The marketing team needs to find accounts expiring in a specific time window. Since the "from_date" and "to_date" are always changing, a function makes the most sense.
+- GetUserMissedWatchlist: To check a user's unwatched movies on their watchlist, I have to pass the user's ID to the query. A function lets me pass `target_uid` easily.
+- GetTopActors: I wanted to make the limit flexible. By using a function, I can pass a number to get the top 5, top 10, or top 50 actors without rewriting the query.
+
+
+2. Regular Views
+I used Regular Views for queries that don't need any parameters and where we want the data to always be 100% live and up-to-date. Views just hide the ugly join logic and make our code cleaner.
+
+- vw_unwatched_content: Finding movies with zero views is a straightforward query. We don't need to pass inputs to it. I used a View so we can just select from it whenever we want to clean up our server space.
+- vw_revenue_analysis: This query calculates how much money the subscription plans are making. It doesn't need variables, and it's better to use a regular View because we want financial data to be totally real-time.
+
+
+3. Materialized Views
+I chose Materialized Views for my heaviest analytical queries. These queries do a lot of grouping, counting, and math on huge tables (like watch history or reactions). Instead of calculating the math from scratch every single time, a materialized view caches the results physically so read speeds are super fast.
+
+- mv_sentiment_analysis: Calculating all the likes and dislikes across every single video reaction is very heavy. By making it a materialized view, we calculate it once, save it, and then our dashboard can load the sentiment analysis instantly. We can just refresh it automatically at midnight.
+- mv_genre_analysis: Counting the total views for each genre requires joining the Films table with the huge Watch History table. It's a massive aggregation. A materialized view saves the final counts, which is perfect for an analytics page that doesn't need millisecond-level live tracking.

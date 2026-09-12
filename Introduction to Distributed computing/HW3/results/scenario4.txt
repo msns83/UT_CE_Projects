@@ -1,0 +1,58 @@
+==========================================
+Scenario 4: Network Delay
+==========================================
+Purpose: measure how 0ms, 500ms, and 2000ms delays affect eventual convergence.
+
+--- Eventual consistency, 0ms delay ---
+Building replica and client binaries...
+Starting three replicas: mode=eventual, replication_delay=0ms
+All replicas are healthy on ports 8001, 8002, and 8003.
+PUT replica1: HTTP 200, 0.916ms, response={"success":true}
+Immediate GET replica2: fresh, 0.735ms, response={"key":"delay_0","value":"value_0","version":1}
+Convergence: 112.368ms; updated replicas=3.
+Final GET replica2: 0.745ms, response={"key":"delay_0","value":"value_0","version":1}
+Stopping managed replicas...
+  replica1: stopped PID 78443
+  replica2: stopped PID 78444
+  replica3: stopped PID 78445
+
+--- Eventual consistency, 500ms delay ---
+Building replica and client binaries...
+Starting three replicas: mode=eventual, replication_delay=500ms
+All replicas are healthy on ports 8001, 8002, and 8003.
+PUT replica1: HTTP 200, 0.735ms, response={"success":true}
+Immediate GET replica2: STALE, 0.705ms, response={"key":"","value":"","version":0,"error":"Key 'delay_500' not found"}
+Convergence: 593.155ms; updated replicas=3.
+Final GET replica2: 0.636ms, response={"key":"delay_500","value":"value_500","version":1}
+Stopping managed replicas...
+  replica1: stopped PID 78574
+  replica2: stopped PID 78575
+  replica3: stopped PID 78576
+
+--- Eventual consistency, 2000ms delay ---
+Building replica and client binaries...
+Starting three replicas: mode=eventual, replication_delay=2000ms
+All replicas are healthy on ports 8001, 8002, and 8003.
+PUT replica1: HTTP 200, 0.784ms, response={"success":true}
+Immediate GET replica2: STALE, 0.668ms, response={"key":"","value":"","version":0,"error":"Key 'delay_2000' not found"}
+Convergence: 2063.185ms; updated replicas=3.
+Final GET replica2: 0.705ms, response={"key":"delay_2000","value":"value_2000","version":1}
+Stopping managed replicas...
+  replica1: stopped PID 78783
+  replica2: stopped PID 78784
+  replica3: stopped PID 78785
+
+--- Strong consistency comparison, 0ms delay ---
+Building replica and client binaries...
+Starting three replicas: mode=strong, replication_delay=0ms
+All replicas are healthy on ports 8001, 8002, and 8003.
+PUT replica1: HTTP 200, 3.159ms, response={"success":true}
+Immediate GET replica2: fresh, 0.869ms, response={"key":"strong_delay","value":"strong_value","version":1}
+Convergence: 114.254ms; updated replicas=3.
+
+Results saved to /Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/scenario4.txt
+Metrics updated in /Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/metrics.txt
+Stopping managed replicas...
+  replica1: stopped PID 79353
+  replica2: stopped PID 79354
+  replica3: stopped PID 79355

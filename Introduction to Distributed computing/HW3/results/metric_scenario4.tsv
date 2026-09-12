@@ -1,0 +1,4 @@
+4A	Eventual	0ms	0.916	0.740	112.368	0	3	Converged to value_0
+4B	Eventual	500ms	0.735	0.670	593.155	1	3	Converged to value_500
+4C	Eventual	2000ms	0.784	0.686	2063.185	1	3	Converged to value_2000
+4D	Strong	0ms	3.159	0.869	114.254	0	3	Synchronous write completed

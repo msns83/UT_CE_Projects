@@ -1,0 +1,22 @@
+==========================================
+Scenario 1: Temporary Inconsistency
+==========================================
+Purpose: show a stale read followed by convergence in eventual mode.
+
+Building replica and client binaries...
+Starting three replicas: mode=eventual, replication_delay=500ms
+All replicas are healthy on ports 8001, 8002, and 8003.
+PUT replica1: HTTP 200, 0.837ms, response={"success":true}
+Immediate GET replica2: STALE, 0.711ms, response={"key":"","value":"","version":0,"error":"Key 'x' not found"}
+All replicas converged after 627.387ms.
+Final GET replica1: 0.726ms, response={"key":"x","value":"10","version":1}
+Final GET replica2: 0.698ms, response={"key":"x","value":"10","version":1}
+Final GET replica3: 0.731ms, response={"key":"x","value":"10","version":1}
+
+Measured summary: PUT=0.837ms, average GET=0.716ms, convergence=627.387ms, stale reads=1.
+Results saved to /Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/scenario1.txt
+Metrics updated in /Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/metrics.txt
+Stopping managed replicas...
+  replica1: stopped PID 74914
+  replica2: stopped PID 74915
+  replica3: stopped PID 74916

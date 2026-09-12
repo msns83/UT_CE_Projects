@@ -1,0 +1,29 @@
+==========================================
+Scenario 3: Concurrent Conflict
+==========================================
+Purpose: create equal-version concurrent writes and observe LWW convergence.
+
+Building replica and client binaries...
+Starting three replicas: mode=eventual, replication_delay=500ms
+All replicas are healthy on ports 8001, 8002, and 8003.
+Concurrent PUT replica1: HTTP 200, 0.696ms, response={"success":true}
+Concurrent PUT replica2: HTTP 200, 0.696ms, response={"success":true}
+All replicas converged after >10000ms; LWW winner=not-converged.
+Final GET replica1: 0.786ms, response={"key":"conflict","value":"100","version":1}
+Final GET replica2: 0.691ms, response={"key":"conflict","value":"200","version":1}
+Final GET replica3: 0.860ms, response={"key":"conflict","value":"200","version":1}
+
+Conflict-related server log lines:
+/Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/replica1.log:2026/07/25 14:36:37 [replica1] PUT key=conflict value=100 version=1 took 4.709µs
+/Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/replica1.log:2026/07/25 14:36:38 [replica1] Ignored stale replication for key=conflict (received version=1 ts=1784977597608037000, current version=1 ts=1784977597608037000)
+/Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/replica2.log:2026/07/25 14:36:37 [replica2] PUT key=conflict value=200 version=1 took 3.958µs
+/Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/replica2.log:2026/07/25 14:36:38 [replica2] Ignored stale replication for key=conflict (received version=1 ts=1784977597608037000, current version=1 ts=1784977597608037000)
+/Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/replica3.log:2026/07/25 14:36:38 [replica3] Replicated key=conflict value=200 version=1 from replica2
+/Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/replica3.log:2026/07/25 14:36:38 [replica3] Ignored stale replication for key=conflict (received version=1 ts=1784977597608037000, current version=1 ts=1784977597608037000)
+
+Results saved to /Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/scenario3.txt
+Metrics updated in /Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/metrics.txt
+Stopping managed replicas...
+  replica1: stopped PID 75489
+  replica2: stopped PID 75490
+  replica3: stopped PID 75491

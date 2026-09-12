@@ -1,0 +1,130 @@
+# Web Service (VM1)
+
+## Overview
+This service acts as the central hub and client-facing frontend for the distributed system.
+
+## Step-by-Step Deployment Guide
+
+Follow this guide to deploy these microservices from scratch on an Apple Silicon Mac or Linux system using **Multipass**.
+
+### Step 1: Install Multipass
+**On macOS (using Homebrew):**
+```bash
+brew install --cask multipass
+```
+**On Linux:**
+```bash
+sudo snap install multipass
+```
+
+### Step 2: Create the VMs
+Spin up the three separate VMs (Nodes):
+```bash
+multipass launch --name node-1
+multipass launch --name node-2
+multipass launch --name node-3
+multipass list
+```
+*(Note down the IP addresses from the list command)*
+
+### Step 3: Compile the Go Code (Cross-Compilation)
+Run this on your host machine to build the Linux executables.
+*(Note: If your host is an x86_64 system, replace `GOARCH=arm64` with `GOARCH=amd64`)*
+```bash
+# Compile Auth Service
+cd auth-vm && GOOS=linux GOARCH=arm64 go build -o auth-server main.go && cd ..
+
+# Compile File Service
+cd file-vm && GOOS=linux GOARCH=arm64 go build -o file-server main.go && cd ..
+
+# Compile Web Service
+cd web-vm && GOOS=linux GOARCH=arm64 go build -o web-server main.go && cd ..
+```
+
+### Step 4: Transfer Files to the VMs
+
+**For Node 2 (Auth Service):**
+```bash
+multipass transfer auth-vm/auth-server node-2:auth-server
+multipass transfer auth-vm/users.json node-2:users.json
+```
+
+**For Node 3 (File Service):**
+```bash
+multipass exec node-3 -- mkdir -p file-vm/files file-vm/images
+multipass transfer file-vm/file-server node-3:file-vm/file-server
+multipass transfer file-vm/images/logo.png node-3:file-vm/images/logo.png
+```
+
+**For Node 1 (Web Service):**
+```bash
+multipass exec node-1 -- mkdir -p web-vm/templates
+multipass transfer web-vm/web-server node-1:web-vm/web-server
+multipass transfer web-vm/templates/login.html node-1:web-vm/templates/login.html
+multipass transfer web-vm/templates/welcome.html node-1:web-vm/templates/welcome.html
+```
+
+### Step 5: Start the Services!
+Open three separate terminal windows to start each service.
+
+**Terminal 1 (VM2 - Auth Service):**
+```bash
+multipass shell node-2
+./auth-server
+```
+
+**Terminal 2 (VM3 - File Service):**
+```bash
+multipass shell node-3
+cd file-vm
+./file-server
+```
+
+**Terminal 3 (VM1 - Web Service):**
+```bash
+multipass shell node-1
+cd web-vm
+
+# Replace these IPs with the ACTUAL IPs assigned to your node-2 and node-3!
+export AUTH_VM_IP="192.168.x.x:8002"
+export FILE_VM_IP="192.168.x.x:8003"
+
+./web-server
+```
+
+### Step 6: Test the System
+Find the IP address of `node-1`. Open your web browser and go to:
+**http://<node-1-ip>:8000/login**
+
+Login Credentials:
+- **alice** / **alice123**
+- **bob** / **bob123**
+- **admin** / **admin123**
+
+### Step 7: Clean Environment
+in order to stop your VMs you can run:
+```bash
+multipass stop --all
+```
+or you can stop them one by one using:
+```bash
+multipass stop node-1 # use your VM name
+```
+to start them again use:
+```bash
+multipass start --all
+```
+and to completely delete them, use:
+```bash
+multipass delete --all
+multipass purge
+```
+
+
+## How it works
+- It exposes a web server using `net/http` on port `8000`.
+- **Login (`/login`)**: When a user submits the login form, this service does *not* process the passwords itself. It connects to the `AUTH_VM_IP` over `net/rpc` and calls the `AuthService.Login` function remotely on Node 2.
+- **Welcome & Files (`/` and `/fetch-image`)**: If the user is authenticated via cookie, the `/fetch-image` endpoint connects to the `FILE_VM_IP` over `net/rpc` and calls `FileService.GetFile` remotely on Node 3 to securely grab image bytes to show the user.
+
+## Note on Dependencies
+Go programs compile into single binary executables through "static linking." Because the Go compiler packs all necessary libraries, memory managers, and the Web server standard library directly into `web-server`, Ubuntu doesn't need any dependencies installed. 

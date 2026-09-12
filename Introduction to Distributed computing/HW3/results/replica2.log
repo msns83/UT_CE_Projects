@@ -1,0 +1,4 @@
+2026/07/25 14:37:37 [replica2] Starting replica on :8002 (mode=strong, delay=0s, peers=[http://localhost:8001 http://localhost:8003])
+2026/07/25 14:37:37 [replica2] Replicated key=strong_delay value=strong_value version=1 from replica1
+2026/07/25 14:37:37 [replica2] GET key=strong_delay value=strong_value version=1 took 500ns
+2026/07/25 14:37:37 [replica2] GET key=strong_delay value=strong_value version=1 took 375ns

@@ -1,0 +1,37 @@
+==========================================
+Scenario 2: Replica Failure
+==========================================
+Purpose: compare eventual and strong writes while replicas fail.
+
+--- Part A: Eventual consistency with replica3 down ---
+Building replica and client binaries...
+Starting three replicas: mode=eventual, replication_delay=0ms
+All replicas are healthy on ports 8001, 8002, and 8003.
+  replica3: stopped PID 75215
+PUT replica1: HTTP 200, 0.848ms, response={"success":true}
+Immediate GET replica2: fresh, 0.858ms, response={"key":"failure_eventual","value":"20","version":1}
+Final GET replica2: 0.727ms, response={"key":"failure_eventual","value":"20","version":1}
+Stopping managed replicas...
+  replica1: stopped PID 75213
+  replica2: stopped PID 75214
+  replica3: no managed process
+
+--- Part B: Strong consistency with replica3 down ---
+Building replica and client binaries...
+Starting three replicas: mode=strong, replication_delay=0ms
+All replicas are healthy on ports 8001, 8002, and 8003.
+  replica3: stopped PID 75340
+PUT replica1: HTTP 200, 4.132ms, response={"success":true}
+GET replica1: 0.626ms, response={"key":"failure_strong","value":"30","version":1}
+GET replica2: 0.739ms, response={"key":"failure_strong","value":"30","version":1}
+
+--- Part C: Strong consistency without a majority ---
+  replica2: stopped PID 75339
+PUT replica1: HTTP 503, 1.716ms, response={"success":false,"error":"Failed to achieve majority: failed to achieve majority: got 1/2 acks"}
+
+Results saved to /Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/scenario2.txt
+Metrics updated in /Users/majidsadeghinejad/Desktop/UT/SEM8/Dist/Dist_HWs/HW3/results/metrics.txt
+Stopping managed replicas...
+  replica1: stopped PID 75338
+  replica2: no managed process
+  replica3: no managed process
